@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//span[@t-field='line.discount']" position="replace">
+            <t t-if="line.discount_amount &gt; 0 and not (line.flag_free_line or line.flag_discount_global)">
+                <span t-esc="'{} %'.format('%.2f'%(line.discount))"/>
+                <t t-if="line.discount_amount &gt; 0 and not (line.flag_free_line or line.flag_discount_global)">
+                    (<span t-field="line.discount_amount" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}">-</span>)
+                </t>
+            </t>
+            <t t-else="">
+                <span>
+                    0.00 %
+                </span>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-call='sale.document_tax_totals']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='line.product_uom']" position="attributes">
+            <attribute name="t-if">not line.flag_discount_global</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='line.product_uom_qty']" position="attributes">
+            <attribute name="t-if">not line.flag_discount_global</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='line.price_unit']" position="attributes">
+            <attribute name="t-if">not line.flag_discount_global and not line.flag_free_line</attribute>
+        </xpath>
+        
+        <xpath expr="//span[@t-field='line.price_unit']" position="after">
+            <span t-if="line.flag_free_line">
+                0.00
+            </span>
+        </xpath>
+
+    </template>
+
+</odoo>

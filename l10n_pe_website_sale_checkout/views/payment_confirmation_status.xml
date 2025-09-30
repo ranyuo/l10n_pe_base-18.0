@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="payment_confirmation_status_inherit" inherit_id="website_sale.payment_confirmation_status" priority="10">
+        <xpath expr="//div[@class='card-header']/.." position="attributes">
+            <attribute name="style">--bg-opacity:0.1</attribute>
+        </xpath>
+    </template>
+
+</odoo>

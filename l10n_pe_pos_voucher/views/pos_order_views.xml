@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_pos_pos_form_l10n_pe_pos" model="ir.ui.view">
+        <field name="name">pos.order.form.view.inherit.l10n_pe_pos</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"></field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='pricelist_id']" position="after">
+                <field name="voucher_number" invisible="not voucher_number"/>
+            </xpath>
+
+            <xpath expr="//page[@name='payments']/field/list/field[@name='payment_date']" position="after">
+                <field name="ticket"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

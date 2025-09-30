@@ -1,0 +1,65 @@
+<odoo>
+    <record id="view_picking_withcarrier_out_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.withcarrier.out.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock_delivery.view_picking_withcarrier_out_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='weight']" position="before">
+                <field name="bultos"/>
+            </xpath>
+            <xpath expr="//field[@name='weight']" position="attributes">
+                <attribute name="readonly">l10n_pe_edi_status == 'sent'</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_tree_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.tree.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="l10n_latam_document_number" optional="show"/>
+                <field name="l10n_pe_edi_related_document_type" optional="hide"/>
+                <field name="l10n_pe_edi_document_number" optional="hide"/>
+                <field name="l10n_pe_edi_related_document_date" optional="hide"/>
+            </xpath>
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="invoices_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_internal_search_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.internal.search.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <filter name="to_do_transfers" position="before">
+                <filter string="Con Guía de Remisión" name="con_guia_remision" domain="[('l10n_latam_document_number', '!=', False)]"/>
+            </filter>
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="filter_domain">['|','|', ('name', 'ilike', self), ('origin', 'ilike', self),('l10n_latam_document_number', 'ilike', self)]</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="invoices_ids" string="Facturas" filter_domain="[('invoices_ids.name', 'ilike', self)]"/>
+            </xpath>
+        </field>
+    </record>
+    
+    
+
+    <record id="view_picking_edi_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.edi.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="l10n_pe_edi_stock.view_picking_edi_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_send_delivery_guide']" position="attributes">
+                <attribute name="invisible">state != 'done' or country_code != 'PE' or l10n_pe_edi_status</attribute>
+            </xpath>
+            <xpath expr="//field[@name='l10n_pe_edi_document_number']" position="after">
+                <field name="l10n_pe_edi_related_document_date"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

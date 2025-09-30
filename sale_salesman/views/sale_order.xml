@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_sale_form_inherit" model="ir.ui.view">
+        <field name="name">view.sale.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <group name="order_details" position="inside">
+                <field name="salesman_id" domain="[('is_salesman','=',True)]" options="{'no_create':1,'no_edit':1}"/>
+            </group>
+        </field>
+    </record>
+    
+    
+    <record id="view_order_tree_inherited" model="ir.ui.view">
+        <field name="name">sale.order.tree.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="replace">
+                <field name="salesman_id"  domain="[('is_salesman','=',True)]"/>
+            </field>
+        </field>
+    </record>
+    
+    <record id="view_sales_order_filter_inherited" model="ir.ui.view">
+        <field name="name">sale.order.filter.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="replace">
+                <field name="salesman_id" domain="[('is_salesman','=',True)]"/>
+            </field>
+            <filter name="salesperson" position="replace">
+                <filter string="Vendedor*" name="salesman" domain="[]" context="{'group_by':'salesman_id'}"/>
+            </filter>
+        </field>
+    </record>
+    
+</odoo>

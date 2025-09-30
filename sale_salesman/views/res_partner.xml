@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_form_partner_inherit" model="ir.ui.view">
+        <field name="name">view.form.partner.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="is_salesman"/>
+            </field>
+            <notebook>
+                <page name="saleman" string="Vendedor*">
+                    <group>
+                        <field name="signature_salesman" invisible="is_salesman == False"  options="{'codeview': true}"/>    
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter_inherit" model="ir.ui.view">
+        <field name="name">view.res.partner.filter.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <filter name="type_company" position="after">
+                <filter string="Vendedores" name="is_salesman" domain="[('is_salesman', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+ </odoo>

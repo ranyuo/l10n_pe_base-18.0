@@ -1,0 +1,52 @@
+<odoo>
+    <template id="ubl_20_CommonType" inherit_id="account_edi_ubl_cii.ubl_20_CommonType">
+        <xpath expr="//*[local-name()='OrderReference']" position="attributes">
+            <attribute name="t-if">vals.get('order_reference')</attribute>
+        </xpath>
+        <xpath expr="//*[local-name()='AdditionalDocumentReference']" position="replace">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:AdditionalDocumentReference >
+                    <cbc:ID t-out="foreach_vals.get('id')"/>
+                    <cbc:DocumentTypeCode 
+                        listAgencyName="PE:SUNAT" 
+                        listName="Tipo de Documento" 
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo12"
+                        t-out="foreach_vals.get('document_type_code')"/>
+                    <cbc:DocumentStatusCode t-out="foreach_vals.get('document_status_code')"></cbc:DocumentStatusCode>
+                    <cac:IssuerParty>
+                        <cac:PartyIdentification>
+                            <cbc:ID schemeID="6" t-out="foreach_vals.get('party_identification_id')"></cbc:ID>
+                        </cac:PartyIdentification>
+                    </cac:IssuerParty>
+                </cac:AdditionalDocumentReference>
+            </t>
+        </xpath>
+        <xpath expr="//*[local-name()='BillingReference']" position="after">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:DespatchDocumentReference t-foreach="vals.get('despatch_document_reference_vals',[])" t-as="document">
+                    <cbc:ID t-out="document.get('id')"/>
+                    <cbc:DocumentTypeCode 
+                        listAgencyName="PE:SUNAT" 
+                        listName="Documento Relacionado" 
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo12"
+                        t-out="document.get('document_type_code')"/>
+                </cac:DespatchDocumentReference>
+            </t>
+        </xpath>
+    </template>
+
+
+    <template id="ubl_20_InvoiceType" inherit_id="account_edi_ubl_cii.ubl_20_InvoiceType">
+        <xpath expr="//*[local-name()='PaymentTerms']" position="after">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+               xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:PrepaidPayment t-foreach="vals.get('prepaid_payment_list',[])" t-as="document">
+                    <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Anticipo" t-out="document.get('id')"></cbc:ID>
+                    <cbc:PaidAmount t-att-currencyID="document.get('currency_name')" t-out="format_float(document.get('paid_amount'), document.get('currency_dp'))"/>
+                </cac:PrepaidPayment>
+            </t>
+        </xpath>
+    </template>
+</odoo>

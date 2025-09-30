@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//span[@t-field='line.discount']" position="replace">
+            <t t-if="line.discount_amount &gt; 0 and not (line.flag_free_line or line.flag_discount_global)">
+                <span t-esc="'{} %'.format('%.2f'%(line.discount))"/>
+                <t t-if="line.discount_amount &gt; 0 and not (line.flag_free_line or line.flag_discount_global)">
+                    (<span t-field="line.discount_amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}">-</span>)
+                </t>
+            </t>
+            <t t-else="">
+                <span>
+                    0.00 %
+                </span>
+            </t>
+        </xpath>
+    
+    
+        <!--TOTALES-->
+        <xpath expr="//table//t[@t-call='account.document_tax_totals']" position="before">
+            <t t-set="inverse_currency_rate" t-value="o.inverse_currency_rate"/>
+                
+            <div name="summary_totals">
+                <!-- SUBTOTAL -->
+                <tr name="subtotal_op">
+                    <td>
+                        <strong>SUBTOTAL</strong>
+                    </td>
+                    <td class="text-end">
+                        <span t-field="o.subtotal_before_discount"/>
+                    </td>
+                    <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                        <span t-esc="o.subtotal_before_discount*inverse_currency_rate"
+                              t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                    </td>
+                </tr>
+                
+                <!-- DESCUENTO GLOBAL - SOLO DEBE HABER 1 DESCUENTO GLOBAL, ESTO SE RESTRINGE BAJO LA LOGICA EN PYTHON -->
+                <t t-foreach="o.invoice_line_ids.filtered(lambda l: l.flag_discount_global)" t-as="line">
+                    <tr name="subtotal_descuentos" >
+                        <td>
+                            <strong t-field="line.name"></strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="line.price_total"/>
+                        </td>
+                        <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE') and o.company_id.show_subtotal_pen" >
+                            <span t-esc="line.price_total*inverse_currency_rate"
+                                    t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </td>
+                    </tr>
+                </t>
+                
+                
+                <t t-if="1">
+                    <tr name="subtotal_op_gravada">
+                        <td>
+                            <strong>OP. GRAVADA</strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.total_sale_taxed"/>
+                        </td>
+                        <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                            <span t-esc="o.total_sale_taxed*inverse_currency_rate"
+                                t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr name="subtotal_op_inafecta" t-if="o.total_sale_unaffected &gt; 0">
+                        <td>
+                            <strong>OP. INAFECTA</strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.total_sale_unaffected"/>
+                        </td>
+                        <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                            <span t-esc="o.total_sale_unaffected*inverse_currency_rate"
+                                    t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr name="subtotal_op_exonerada" t-if="o.total_sale_exonerated &gt; 0">
+                        <td>
+                            <strong>OP. EXONERADA</strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.total_sale_exonerated"/>
+                        </td>
+                        <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                            <span t-esc="o.total_sale_exonerated*inverse_currency_rate"
+                                    t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr name="subtotal_op_exportacion" t-if="o.total_sale_export &gt; 0">
+                        <td>
+                            <strong>OP. EXPORTACIÓN</strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.total_sale_export"/>
+                        </td>
+                        <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                            <span t-esc="o.total_sale_export*inverse_currency_rate"
+                                  t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr name="subtotal_op_gratuita" t-if="o.total_sale_free &gt; 0">
+                        <td>
+                            <strong>OP. GRATUITA</strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.total_sale_free"/>
+                        </td>
+                        <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                            <span t-esc="o.total_sale_free*inverse_currency_rate"
+                                    t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr name="subtotal_igv">
+                        <td>
+                            <strong>IGV 18%</strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.total_sale_igv"/>
+                        </td>
+                        <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                            <span t-esc="o.total_sale_igv*inverse_currency_rate"
+                                t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </td>
+                    </tr>
+                </t>
+                <tr name="tip_amount" t-if="o.tip_amount &gt; 0">
+                    <td>
+                        <strong>PROPINA</strong>
+                    </td>
+                    <td class="text-end">
+                        <span t-field="o.tip_amount"/>
+                    </td>
+                    <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                        <span t-esc="o.tip_amount*inverse_currency_rate"
+                            t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                    </td>
+                </tr>
+                <tr name="total" class="border-black o_total">
+                    <td>
+                        <strong>TOTAL</strong>
+                    </td>
+                    <td class="text-end">
+                        <span t-field="o.total_venta"/>
+                    </td>
+                    <td class="text-end" t-if="inverse_currency_rate != 1 and (not o.partner_id.country_id.exists() or o.partner_id.country_id.code == 'PE')">
+                        <span t-esc="o.total_venta*inverse_currency_rate"
+                            t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                    </td>
+                </tr>
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-call='account.document_tax_totals']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='line.price_unit']" position="attributes">
+            <attribute name="t-if">not line.flag_discount_global and not line.flag_free_line</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.price_unit']" position="after">
+            <span t-if="line.flag_free_line">
+                0.00
+            </span>
+        </xpath>
+        <xpath expr="//span[@t-field='line.quantity']" position="attributes">
+            <attribute name="t-if">not line.flag_discount_global</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.product_uom_id']" position="attributes">
+            <attribute name="t-if">not line.flag_discount_global</attribute>
+        </xpath>
+        <xpath expr="//t[@t-set='lines']" position="after">
+            <t t-set="lines" t-value="lines.filtered(lambda l: not l.is_tip)"/>
+        </xpath>
+    </template>
+
+</odoo>

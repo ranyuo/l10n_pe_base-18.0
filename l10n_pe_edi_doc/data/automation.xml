@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="action_server_search_and_set_stock_picking" model="ir.actions.server">
+        <field name="name">Execute search_and_set_stock_picking</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.search_and_set_stock_picking()
+        </field>
+    </record>
+    
+    <record id="automation_search_and_set_stock_picking" model="base.automation">
+        <field name="name">Execute account.move change</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="trigger">on_create</field>
+        <field name="action_server_ids" eval="[(4, ref('l10n_pe_edi_doc.action_server_search_and_set_stock_picking'))]"/>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,25 @@
+{
+    'name': 'Detracciones en Documentos de Compra-Tablas de Detracciones',
+    'version': '1.0',
+    "license": "OPL-1",
+    'summary': "Detracciones en Documentos de Compra-Tablas de Detracciones",
+    'author': "Franco Najarro",
+    'depends': [
+        'base_setup',
+        'account',
+        'l10n_pe_account_document_extra_fields',
+        'l10n_pe_edi_doc',
+    ],
+    'data': [
+        'data/journal_data.xml',
+        'security/ir.model.access.csv',
+        'views/detraccion_view.xml',
+        'views/tipo_detraccion_line_view.xml',
+        'views/res_partner_bank.xml',
+        'views/account_journal_view.xml',
+        'views/account_detraccion_view.xml',
+        'views/account_move_view.xml',
+        'data/tipo.detraccion.csv',
+        ],
+    'installable': True,
+}

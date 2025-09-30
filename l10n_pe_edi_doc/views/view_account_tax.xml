@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="l10n_pe_view_tax_form_inherit"  model="ir.ui.view">
+        <field name="name">Agregación de Propina</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="l10n_pe.view_tax_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='l10n_pe_edi_tax_code']" position="after">
+                <field name="l10n_pe_edi_is_tip" invisible="l10n_pe_edi_tax_code != '9999'"/>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo> 

@@ -1,0 +1,18 @@
+<odoo>
+
+    <record id="view_base_document_layout_inherit" model="ir.ui.view">
+        <field name="name">view.base.document.layout</field>
+        <field name="model">base.document.layout</field>
+        <field name="inherit_id" ref="web.view_base_document_layout"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[1]" position="after">
+                <group string="Opciones Extras">
+                    <field name="show_default_code_invoice"/>
+                    <field name="show_default_code_quotation"/>
+                    <field name="show_subtotal_pen"/>
+                </group>    
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

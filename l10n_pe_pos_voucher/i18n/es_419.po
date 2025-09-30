@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_pe_pos_voucher
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-08 21:15+0000\n"
+"PO-Revision-Date: 2025-06-08 21:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pe_pos_voucher
+#. odoo-python
+#: code:addons/l10n_pe_pos_voucher/models/pos_payment.py:0
+#: code:addons/l10n_pe_pos_voucher/models/pos_payment.py:0
+#: code:addons/l10n_pe_pos_voucher/models/pos_payment.py:0
+#: code:addons/l10n_pe_pos_voucher/models/pos_session.py:0
+#: code:addons/l10n_pe_pos_voucher/models/pos_session.py:0
+#: code:addons/l10n_pe_pos_voucher/models/pos_session.py:0
+#, python-format
+msgid " N° Voucher: "
+msgstr " Número de comprobante: "
+
+#. module: l10n_pe_pos_voucher
+#. odoo-javascript
+#: code:addons/l10n_pe_pos_voucher/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model.fields,field_description:l10n_pe_pos_voucher.field_pos_payment_method__is_card_payment
+msgid "Card Payment"
+msgstr ""
+
+#. module: l10n_pe_pos_voucher
+#. odoo-javascript
+#: code:addons/l10n_pe_pos_voucher/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model,name:l10n_pe_pos_voucher.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: l10n_pe_pos_voucher
+#. odoo-javascript
+#: code:addons/l10n_pe_pos_voucher/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Missing voucher number"
+msgstr "Número de comprobante faltante"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model.fields,field_description:l10n_pe_pos_voucher.field_account_move_line__operation_number
+#: model:ir.model.fields,field_description:l10n_pe_pos_voucher.field_account_payment__operation_number
+msgid "Operation number"
+msgstr "Número de operación"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model,name:l10n_pe_pos_voucher.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: l10n_pe_pos_voucher
+#. odoo-javascript
+#: code:addons/l10n_pe_pos_voucher/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Please register the voucher number of "
+msgstr "Por favor, registre el número de comprobante de "
+
+#. module: l10n_pe_pos_voucher
+#. odoo-javascript
+#: code:addons/l10n_pe_pos_voucher/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Please register the voucher number for the payment of "
+msgstr "Por favor, registre el número del comprobante para el pago de "
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model,name:l10n_pe_pos_voucher.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del punto de venta"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model,name:l10n_pe_pos_voucher.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Órdenes del punto de venta"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model,name:l10n_pe_pos_voucher.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Métodos de pago de punto de venta "
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model,name:l10n_pe_pos_voucher.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "Pagos en punto de venta"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model,name:l10n_pe_pos_voucher.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesión de punto de venta"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model.fields,field_description:l10n_pe_pos_voucher.field_pos_order__voucher_number
+msgid "Voucher number"
+msgstr "Número de comprobante"
+
+#. module: l10n_pe_pos_voucher
+#: model:ir.model.fields,help:l10n_pe_pos_voucher.field_pos_order__voucher_number
+msgid "Voucher number for the order"
+msgstr "Número de comprobante para el pedido"
+
+#. module: l10n_pe_pos_voucher
+#. odoo-python
+#: code:addons/l10n_pe_pos_voucher/models/pos_config.py:0
+#, python-format
+msgid "You have to set a country in your company setting."
+msgstr "Debe configurar un país en los ajustes de su empresa."

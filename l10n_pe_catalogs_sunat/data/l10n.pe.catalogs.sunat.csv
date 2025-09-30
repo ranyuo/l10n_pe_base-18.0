@@ -1,0 +1,815 @@
+"id","associated_table_id:id","code","description","reference"
+"catalog_sunat_1_001","1","001","DEPÓSITO EN CUENTA",
+"catalog_sunat_1_002","1","002","GIRO",
+"catalog_sunat_1_003","1","003","TRANSFERENCIA DE FONDOS",
+"catalog_sunat_1_004","1","004","ORDEN DE PAGO",
+"catalog_sunat_1_005","1","005","TARJETA DE DÉBITO",
+"catalog_sunat_1_006","1","006","TARJETA DE CRÉDITO EMITIDA EN EL PAÍS POR UNA EMPRESA DEL SISTEMA FINANCIERO",
+"catalog_sunat_1_007","1","007","CHEQUES CON LA CLÁUSULA DE 'NO NEGOCIABLE', 'INTRANSFERIBLES', 'NO A LA ORDEN' U OTRA EQUIVALENTE, A QUE SE REFIERE EL INCISO G) DEL ARTICULO 5° DE LA LEY",
+"catalog_sunat_1_008","1","008","EFECTIVO, POR OPERACIONES EN LAS QUE NO EXISTE OBLIGACIÓN DE UTILIZAR MEDIO DE PAGO",
+"catalog_sunat_1_009","1","009","EFECTIVO, EN LOS DEMÁS CASOS",
+"catalog_sunat_1_010","1","010","MEDIOS DE PAGO USADOS EN COMERCIO EXTERIOR",
+"catalog_sunat_1_011","1","011","DOCUMENTOS EMITIDOS POR LAS EDPYMES Y LAS COOPERATIVAS DE AHORRO Y CRÉDITO NO AUTORIZADAS A CAPTAR DEPÓSITOS DEL PÚBLICO",
+"catalog_sunat_1_012","1","012","TARJETA DE CRÉDITO EMITIDA EN EL PAÍS O EN EL EXTERIOR POR UNA EMPRESA NO PERTENECIENTE AL SISTEMA FINANCIERO, CUYO OBJETO PRINCIPAL SEA LA EMISIÓN Y ADMINISTRACIÓN DE TARJETAS DE CRÉDITO",
+"catalog_sunat_1_013","1","013","TARJETAS DE CRÉDITO EMITIDAS EN EL EXTERIOR POR EMPRESAS BANCARIAS O FINANCIERAS NO DOMICILIADAS",
+"catalog_sunat_1_101","1","101","TRANSFERENCIAS - COMERCIO EXTERIOR",
+"catalog_sunat_1_102","1","102","CHEQUES BANCARIOS  - COMERCIO EXTERIOR",
+"catalog_sunat_1_103","1","103","ORDEN DE PAGO SIMPLE  - COMERCIO EXTERIOR",
+"catalog_sunat_1_104","1","104","ORDEN DE PAGO DOCUMENTARIO  - COMERCIO EXTERIOR",
+"catalog_sunat_1_105","1","105","REMESA SIMPLE  - COMERCIO EXTERIOR",
+"catalog_sunat_1_106","1","106","REMESA DOCUMENTARIA  - COMERCIO EXTERIOR",
+"catalog_sunat_1_107","1","107","CARTA DE CRÉDITO SIMPLE  - COMERCIO EXTERIOR",
+"catalog_sunat_1_108","1","108","CARTA DE CRÉDITO DOCUMENTARIO  - COMERCIO EXTERIOR",
+"catalog_sunat_1_999","1","999","OTROS MEDIOS DE PAGO",
+"catalog_sunat_2_0","2","0","OTROS TIPOS DE DOCUMENTOS",
+"catalog_sunat_2_1","2","1","DOCUMENTO NACIONAL DE IDENTIDAD (DNI)",
+"catalog_sunat_2_4","2",4,"CARNET DE EXTRANJERIA",
+"catalog_sunat_2_6","2",6,"REGISTRO ÚNICO DE CONTRIBUYENTES",
+"catalog_sunat_2_7","2",7,"PASAPORTE",
+"catalog_sunat_2_A","2","A","CÉDULA DIPLOMÁTICA DE IDENTIDAD",
+"catalog_sunat_3_1","3",1,"CENTRAL RESERVA DEL PERU ",
+"catalog_sunat_3_2","3",2,"DE CREDITO DEL PERU      ",
+"catalog_sunat_3_3","3",3,"INTERNACIONAL DEL PERU   ",
+"catalog_sunat_3_5","3",5,"LATINO                   ",
+"catalog_sunat_3_7","3",7,"CITIBANK DEL PERU S.A.",
+"catalog_sunat_3_8","3",8,"STANDARD CHARTERED",
+"catalog_sunat_3_9","3",9,"SCOTIABANK PERU",
+"catalog_sunat_3_11","3",11,"CONTINENTAL              ",
+"catalog_sunat_3_12","3",12,"DE LIMA                  ",
+"catalog_sunat_3_16","3",16,"MERCANTIL                ",
+"catalog_sunat_3_18","3",18,"NACION                   ",
+"catalog_sunat_3_22","3",22,"SANTANDER CENTRAL HISPANO",
+"catalog_sunat_3_23","3",23,"DE COMERCIO              ",
+"catalog_sunat_3_25","3",25,"REPUBLICA                ",
+"catalog_sunat_3_26","3",26,"NBK BANK                 ",
+"catalog_sunat_3_29","3",29,"BANCOSUR",
+"catalog_sunat_3_35","3",35,"FINANCIERO DEL PERU      ",
+"catalog_sunat_3_37","3",37,"DEL PROGRESO             ",
+"catalog_sunat_3_38","3",38,"INTERAMERICANO FINANZAS  ",
+"catalog_sunat_3_39","3",39,"BANEX                    ",
+"catalog_sunat_3_40","3",40,"NUEVO MUNDO              ",
+"catalog_sunat_3_41","3",41,"SUDAMERICANO             ",
+"catalog_sunat_3_42","3",42,"DEL LIBERTADOR",
+"catalog_sunat_3_43","3",43,"DEL TRABAJO",
+"catalog_sunat_3_44","3",44,"SOLVENTA                 ",
+"catalog_sunat_3_45","3",45,"SERBANCO SA.             ",
+"catalog_sunat_3_46","3",46,"BANK OF BOSTON           ",
+"catalog_sunat_3_47","3",47,"ORION                    ",
+"catalog_sunat_3_48","3",48,"DEL PAIS                 ",
+"catalog_sunat_3_49","3",49,"MI BANCO                 ",
+"catalog_sunat_3_50","3",50,"BNP PARIBAS",
+"catalog_sunat_3_51","3",51,"AGROBANCO",
+"catalog_sunat_3_53","3",53,"HSBC BANK PERU S.A.      ",
+"catalog_sunat_3_54","3",54,"BANCO FALABELLA S.A.",
+"catalog_sunat_3_55","3",55,"BANCO RIPLEY",
+"catalog_sunat_3_56","3",56,"BANCO SANTANDER PERU S.A.",
+"catalog_sunat_3_58","3",58,"BANCO AZTECA DEL PERU",
+"catalog_sunat_3_99","3",99,"OTROS",
+"catalog_sunat_4_AED","4","AED","UAE Dirham","Emiratos Árabes Unidos"
+"catalog_sunat_4_AFN","4","AFN","Afghani","Afganistán"
+"catalog_sunat_4_ALL","4","ALL","Lek","Albania"
+"catalog_sunat_4_AMD","4","AMD","Armenian Dram","Armenia"
+"catalog_sunat_4_ANG","4","ANG","Netherlands Antillian Guilder","Antillas Holandesas"
+"catalog_sunat_4_AOA","4","AOA","Kwanza","Angola"
+"catalog_sunat_4_ARS","4","ARS","Argentine Peso","Argentina"
+"catalog_sunat_4_AUD","4","AUD","Australian Dollar","Australia"
+"catalog_sunat_4_AWG","4","AWG","Aruban Guilder","Aruba"
+"catalog_sunat_4_AZN","4","AZN","Azerbaijanian Manat","Azerbaiyán"
+"catalog_sunat_4_BAM","4","BAM","Convertible Marks","Bosnia y Herzegovina"
+"catalog_sunat_4_BBD","4","BBD","Barbados Dollar","Barbados"
+"catalog_sunat_4_BDT","4","BDT","Taka","Bangladesh"
+"catalog_sunat_4_BGN","4","BGN","Bulgarian Lev","Bulgaria"
+"catalog_sunat_4_BHD","4","BHD","Bahraini Dinar","Bahréin"
+"catalog_sunat_4_BIF","4","BIF","Burundi Franc","Burundi"
+"catalog_sunat_4_BMD","4","BMD","Bermudian Dollar (customarily known as Bermuda Dollar)","Bermudas"
+"catalog_sunat_4_BND","4","BND","Brunei Dollar","Brunéi Darussalam"
+"catalog_sunat_4_BOB","4","BOB","Boliviano","Bolivia"
+"catalog_sunat_4_BOV","4","BOV","Mvdol","Bolivia"
+"catalog_sunat_4_BRL","4","BRL","Brazilian Real","Brasil"
+"catalog_sunat_4_BSD","4","BSD","Bahamian Dollar","Bahamas"
+"catalog_sunat_4_BTN","4","BTN","Ngultrum","Bután"
+"catalog_sunat_4_BWP","4","BWP","Pula","Botsuana"
+"catalog_sunat_4_BYR","4","BYR","Belarussian Ruble","Bielorrusia"
+"catalog_sunat_4_BZD","4","BZD","Belize Dollar","Belice"
+"catalog_sunat_4_CAD","4","CAD","Canadian Dollar","Canadá"
+"catalog_sunat_4_CDF","4","CDF","Congolese Franc","República Democrática del Congo"
+"catalog_sunat_4_CHE","4","CHE","WIR Euro","Suiza"
+"catalog_sunat_4_CHF","4","CHF","Swiss Franc","Suiza"
+"catalog_sunat_4_CHW","4","CHW","WIR Franc","Suiza"
+"catalog_sunat_4_CLF","4","CLF","Unidades de fomento","Chile"
+"catalog_sunat_4_CLP","4","CLP","Chilean Peso","Chile"
+"catalog_sunat_4_CNY","4","CNY","Yuan Renminbi","China (República Popular)"
+"catalog_sunat_4_COP","4","COP","Colombian Peso","Colombia"
+"catalog_sunat_4_COU","4","COU","Unidad de Valor Real","Colombia"
+"catalog_sunat_4_CRC","4","CRC","Costa Rican Colon","Costa Rica"
+"catalog_sunat_4_CUC","4","CUC","Peso Convertible","Cuba"
+"catalog_sunat_4_CUP","4","CUP","Cuban Peso","Cuba"
+"catalog_sunat_4_CVE","4","CVE","Cape Verde Escudo","Cabo Verde"
+"catalog_sunat_4_CZK","4","CZK","Czech Koruna","República Checa"
+"catalog_sunat_4_DJF","4","DJF","Djibouti Franc","Yibuti"
+"catalog_sunat_4_DKK","4","DKK","Danish Krone","Dinamarca"
+"catalog_sunat_4_DOP","4","DOP","Dominican Peso","República Dominicana"
+"catalog_sunat_4_DZD","4","DZD","Algerian Dinar","Argelia"
+"catalog_sunat_4_EEK","4","EEK","Kroon","Estonia"
+"catalog_sunat_4_EGP","4","EGP","Egyptian Pound","Egipto"
+"catalog_sunat_4_ERN","4","ERN","Nakfa","Eritrea"
+"catalog_sunat_4_ETB","4","ETB","Ethiopian Birr","Etiopía"
+"catalog_sunat_4_EUR","4","EUR","Euro","Unión Europea"
+"catalog_sunat_4_FJD","4","FJD","Fiji Dollar","Fiyi"
+"catalog_sunat_4_FKP","4","FKP","Falkland Islands Pound","Islas Malvinas"
+"catalog_sunat_4_GBP","4","GBP","Pound Sterling","Reino Unido"
+"catalog_sunat_4_GEL","4","GEL","Lari","Georgia"
+"catalog_sunat_4_GHS","4","GHS","Cedi","Ghana"
+"catalog_sunat_4_GIP","4","GIP","Gibraltar Pound","Gibraltar"
+"catalog_sunat_4_GMD","4","GMD","Dalasi","Gambia"
+"catalog_sunat_4_GNF","4","GNF","Guinea Franc","Guinea"
+"catalog_sunat_4_GTQ","4","GTQ","Quetzal","Guatemala"
+"catalog_sunat_4_GYD","4","GYD","Guyana Dollar","Guyana"
+"catalog_sunat_4_HKD","4","HKD","Hong Kong Dollar","Hong Kong"
+"catalog_sunat_4_HNL","4","HNL","Lempira","Honduras"
+"catalog_sunat_4_HRK","4","HRK","Croatian Kuna","Croacia"
+"catalog_sunat_4_HTG","4","HTG","Gourde","Haití"
+"catalog_sunat_4_HUF","4","HUF","Forint","Hungría"
+"catalog_sunat_4_IDR","4","IDR","Rupiah","Indonesia"
+"catalog_sunat_4_ILS","4","ILS","New Israeli Sheqel","Israel"
+"catalog_sunat_4_INR","4","INR","Indian Rupee","India"
+"catalog_sunat_4_IQD","4","IQD","Iraqi Dinar","Iraq"
+"catalog_sunat_4_IRR","4","IRR","Iranian Rial","Irán"
+"catalog_sunat_4_ISK","4","ISK","Iceland Krona","Islandia"
+"catalog_sunat_4_JMD","4","JMD","Jamaican Dollar","Jamaica"
+"catalog_sunat_4_JOD","4","JOD","Jordanian Dinar","Jordania"
+"catalog_sunat_4_JPY","4","JPY","Yen","Japón"
+"catalog_sunat_4_KES","4","KES","Kenyan Shilling","Kenia"
+"catalog_sunat_4_KGS","4","KGS","Som","Kirguistán"
+"catalog_sunat_4_KHR","4","KHR","Riel","Camboya"
+"catalog_sunat_4_KMF","4","KMF","Comoro Franc","Comoras"
+"catalog_sunat_4_KPW","4","KPW","North Korean Won","Corea (del Norte)"
+"catalog_sunat_4_KRW","4","KRW","Won","Corea (del Sur)"
+"catalog_sunat_4_KWD","4","KWD","Kuwaiti Dinar","Kuwait"
+"catalog_sunat_4_KYD","4","KYD","Cayman Islands Dollar","Islas Caimán"
+"catalog_sunat_4_KZT","4","KZT","Tenge","Kazajistán"
+"catalog_sunat_4_LAK","4","LAK","Kip","Laos"
+"catalog_sunat_4_LBP","4","LBP","Lebanese Pound","Líbano"
+"catalog_sunat_4_LKR","4","LKR","Sri Lanka Rupee","Sri Lanka"
+"catalog_sunat_4_LRD","4","LRD","Liberian Dollar","Liberia"
+"catalog_sunat_4_LSL","4","LSL","Loti","Lesoto"
+"catalog_sunat_4_LTL","4","LTL","Lithuanian Litas","Lituania"
+"catalog_sunat_4_LVL","4","LVL","Latvian Lats","Letonia"
+"catalog_sunat_4_LYD","4","LYD","Libyan Dinar","Libia"
+"catalog_sunat_4_MAD","4","MAD","Moroccan Dirham","Marruecos"
+"catalog_sunat_4_MDL","4","MDL","Moldovan Leu","Moldavia"
+"catalog_sunat_4_MGA","4","MGA","Malagasy Ariary","Madagascar"
+"catalog_sunat_4_MKD","4","MKD","Denar","Macedonia"
+"catalog_sunat_4_MMK","4","MMK","Kyat","Myanmar (Birmania)"
+"catalog_sunat_4_MNT","4","MNT","Tugrik","Mongolia"
+"catalog_sunat_4_MOP","4","MOP","Pataca","Macao"
+"catalog_sunat_4_MRO","4","MRO","Ouguiya","Mauritania"
+"catalog_sunat_4_MUR","4","MUR","Mauritius Rupee","Mauricio"
+"catalog_sunat_4_MVR","4","MVR","Rufiyaa","Maldivas"
+"catalog_sunat_4_MWK","4","MWK","Kwacha","Malaui"
+"catalog_sunat_4_MXN","4","MXN","Mexican Peso","México"
+"catalog_sunat_4_MXV","4","MXV","Mexican Unidad de Inversion (UDI)","México"
+"catalog_sunat_4_MYR","4","MYR","Malaysian Ringgit","Malasia"
+"catalog_sunat_4_MZN","4","MZN","Metical","Mozambique"
+"catalog_sunat_4_NAD","4","NAD","Namibia Dollar","Namibia"
+"catalog_sunat_4_NGN","4","NGN","Naira","Nigeria"
+"catalog_sunat_4_NIO","4","NIO","Cordoba Oro","Nicaragua"
+"catalog_sunat_4_NOK","4","NOK","Norwegian Krone","Noruega"
+"catalog_sunat_4_NPR","4","NPR","Nepalese Rupee","Nepal"
+"catalog_sunat_4_NZD","4","NZD","New Zealand Dollar","Nueva Zelanda"
+"catalog_sunat_4_OMR","4","OMR","Rial Omani","Omán"
+"catalog_sunat_4_PAB","4","PAB","Balboa","Panamá"
+"catalog_sunat_4_PEN","4","PEN","Nuevo Sol o Sol","Perú"
+"catalog_sunat_4_PGK","4","PGK","Kina","Papúa Nueva Guinea"
+"catalog_sunat_4_PHP","4","PHP","Philippine Peso","Filipinas"
+"catalog_sunat_4_PKR","4","PKR","Pakistan Rupee","Pakistán"
+"catalog_sunat_4_PLN","4","PLN","Zloty","Polonia"
+"catalog_sunat_4_PYG","4","PYG","Guarani","Paraguay"
+"catalog_sunat_4_QAR","4","QAR","Qatari Rial","Qatar"
+"catalog_sunat_4_RON","4","RON","New Leu","Rumania"
+"catalog_sunat_4_RSD","4","RSD","Serbian Dinar","Serbia"
+"catalog_sunat_4_RUB","4","RUB","Russian Ruble","Rusia"
+"catalog_sunat_4_RWF","4","RWF","Rwanda Franc","Ruanda"
+"catalog_sunat_4_SAR","4","SAR","Saudi Riyal","Arabia Saudita"
+"catalog_sunat_4_SBD","4","SBD","Solomon Islands Dollar","Islas Salomón"
+"catalog_sunat_4_SCR","4","SCR","Seychelles Rupee","Seychelles"
+"catalog_sunat_4_SDG","4","SDG","Sudanese Pound","Sudán"
+"catalog_sunat_4_SEK","4","SEK","Swedish Krona","Suecia"
+"catalog_sunat_4_SGD","4","SGD","Singapore Dollar","Singapur"
+"catalog_sunat_4_SHP","4","SHP","Saint Helena Pound","Santa Helena"
+"catalog_sunat_4_SLL","4","SLL","Leone","Sierra Leona"
+"catalog_sunat_4_SOS","4","SOS","Somali Shilling","Somalia"
+"catalog_sunat_4_SRD","4","SRD","Surinam Dollar","Surinam"
+"catalog_sunat_4_STD","4","STD","Dobra","Santo Tomé y Príncipe"
+"catalog_sunat_4_SVC","4","SVC","El Salvador Colon","El Salvador"
+"catalog_sunat_4_SYP","4","SYP","Syrian Pound","Siria"
+"catalog_sunat_4_SZL","4","SZL","Lilangeni","Suazilandia"
+"catalog_sunat_4_THB","4","THB","Baht","Tailandia"
+"catalog_sunat_4_TJS","4","TJS","Somoni","Tayikistán"
+"catalog_sunat_4_TMT","4","TMT","Manat","Turkmenistán"
+"catalog_sunat_4_TND","4","TND","Tunisian Dinar","Túnez"
+"catalog_sunat_4_TOP","4","TOP","Pa'anga","Tonga"
+"catalog_sunat_4_TRY","4","TRY","Turkish Lira","Turquía"
+"catalog_sunat_4_TTD","4","TTD","Trinidad and Tobago Dollar","Trinidad y Tobago"
+"catalog_sunat_4_TWD","4","TWD","New Taiwan Dollar","Taiwán"
+"catalog_sunat_4_TZS","4","TZS","Tanzanian Shilling","Tanzania"
+"catalog_sunat_4_UAH","4","UAH","Hryvnia","Ucrania"
+"catalog_sunat_4_UGX","4","UGX","Uganda Shilling","Uganda"
+"catalog_sunat_4_USD","4","USD","US Dollar","Estados Unidos (EEUU)"
+"catalog_sunat_4_USN","4","USN","US Dollar (Next day)","Estados Unidos (EEUU)"
+"catalog_sunat_4_USS","4","USS","US Dollar (Same day)","Estados Unidos (EEUU)"
+"catalog_sunat_4_UYI","4","UYI","Uruguay Peso en Unidades Indexadas","Uruguay"
+"catalog_sunat_4_UYU","4","UYU","Peso Uruguayo","Uruguay"
+"catalog_sunat_4_UZS","4","UZS","Uzbekistan Sum","Uzbekistán"
+"catalog_sunat_4_VEF","4","VEF","Bolivar Fuerte","Venezuela"
+"catalog_sunat_4_VND","4","VND","Dong","Vietnam"
+"catalog_sunat_4_VUV","4","VUV","Vatu","Vanuatu"
+"catalog_sunat_4_WST","4","WST","Tala","Samoa del Oeste"
+"catalog_sunat_4_XAF","4","XAF","CFA Franc BEAC ‡","-"
+"catalog_sunat_4_XAG","4","XAG","Silver","-"
+"catalog_sunat_4_XAU","4","XAU","Gold","-"
+"catalog_sunat_4_XBA","4","XBA","Bond Markets Units European Composite Unit (EURCO)","-"
+"catalog_sunat_4_XBB","4","XBB","European Monetary Unit (E.M.U.-6)","-"
+"catalog_sunat_4_XBC","4","XBC","European Unit of Account 9(E.U.A.-9)","-"
+"catalog_sunat_4_XBD","4","XBD","European Unit of Account 17(E.U.A.-17)","-"
+"catalog_sunat_4_XCD","4","XCD","East Caribbean Dollar","-"
+"catalog_sunat_4_XDR","4","XDR","SDR","-"
+"catalog_sunat_4_XFU","4","XFU","UIC-Franc","-"
+"catalog_sunat_4_XOF","4","XOF","CFA Franc BCEAO †","-"
+"catalog_sunat_4_XPD","4","XPD","Palladium","-"
+"catalog_sunat_4_XPF","4","XPF","CFP Franc","-"
+"catalog_sunat_4_XPT","4","XPT","Platinum","-"
+"catalog_sunat_4_YER","4","YER","Yemeni Rial","Yemen"
+"catalog_sunat_4_ZAR","4","ZAR","Rand","Sudáfrica"
+"catalog_sunat_4_ZMK","4","ZMK","Zambian Kwacha","Zambia"
+"catalog_sunat_4_ZWL","4","ZWL","Zimbabwe Dollar","Zimbabue"
+"catalog_sunat_5_01","5","01","MERCADERÍAS",
+"catalog_sunat_5_02","5","02","PRODUCTOS TERMINADOS",
+"catalog_sunat_5_03","5","03","MATERIAS PRIMAS",
+"catalog_sunat_5_04","5","04","ENVASES",
+"catalog_sunat_5_05","5","05","MATERIALES AUXILIARES",
+"catalog_sunat_5_06","5","06","SUMINISTROS ",
+"catalog_sunat_5_07","5","07","REPUESTOS",
+"catalog_sunat_5_08","5","08","EMBALAJES",
+"catalog_sunat_5_09","5","09","SUBPRODUCTOS ",
+"catalog_sunat_5_10","5","10","DESECHOS Y DESPERDICIOS",
+"catalog_sunat_5_91","5","91","OTROS 1",
+"catalog_sunat_5_92","5","92","OTROS 2",
+"catalog_sunat_5_93","5","93","OTROS 3",
+"catalog_sunat_5_94","5","94","OTROS 4",
+"catalog_sunat_5_95","5","95","OTROS 5",
+"catalog_sunat_5_96","5","96","OTROS 6",
+"catalog_sunat_5_97","5","97","OTROS 7",
+"catalog_sunat_5_98","5","98","OTROS 8",
+"catalog_sunat_5_99","5","99","OTROS",
+"catalog_sunat_6_4A","6","4A","BOBINAS                                               ",
+"catalog_sunat_6_BJ","6","BJ","BALDE                                                 ",
+"catalog_sunat_6_BLL","6","BLL","BARRILES                                              ",
+"catalog_sunat_6_BG","6","BG","BOLSA                                                 ",
+"catalog_sunat_6_BO","6","BO","BOTELLAS                                              ",
+"catalog_sunat_6_BX","6","BX","CAJA                                                  ",
+"catalog_sunat_6_CT","6","CT","CARTONES                                              ",
+"catalog_sunat_6_CMK","6","CMK","CENTIMETRO CUADRADO                                   ",
+"catalog_sunat_6_CMQ","6","CMQ","CENTIMETRO CUBICO                                     ",
+"catalog_sunat_6_CMT","6","CMT","CENTIMETRO LINEAL                                     ",
+"catalog_sunat_6_CEN","6","CEN","CIENTO DE UNIDADES                                    ",
+"catalog_sunat_6_CY","6","CY","CILINDRO                                              ",
+"catalog_sunat_6_CJ","6","CJ","CONOS                                                 ",
+"catalog_sunat_6_DZN","6","DZN","DOCENA                                                ",
+"catalog_sunat_6_DZP","6","DZP","DOCENA POR 10**6                                      ",
+"catalog_sunat_6_BE","6","BE","FARDO                                                 ",
+"catalog_sunat_6_GLI","6","GLI","GALON INGLES (4,545956L)",
+"catalog_sunat_6_GRM","6","GRM","GRAMO                                                 ",
+"catalog_sunat_6_GRO","6","GRO","GRUESA                                                ",
+"catalog_sunat_6_HLT","6","HLT","HECTOLITRO                                            ",
+"catalog_sunat_6_LEF","6","LEF","HOJA                                                  ",
+"catalog_sunat_6_SET","6","SET","JUEGO                                                 ",
+"catalog_sunat_6_KGM","6","KGM","KILOGRAMO                                             ",
+"catalog_sunat_6_KTM","6","KTM","KILOMETRO                                             ",
+"catalog_sunat_6_KWH","6","KWH","KILOVATIO HORA                                        ",
+"catalog_sunat_6_KT","6","KT","KIT                                                   ",
+"catalog_sunat_6_CA","6","CA","LATAS                                                 ",
+"catalog_sunat_6_LBR","6","LBR","LIBRAS                                                ",
+"catalog_sunat_6_LTR","6","LTR","LITRO                                                 ",
+"catalog_sunat_6_MWH","6","MWH","MEGAWATT HORA                                         ",
+"catalog_sunat_6_MTR","6","MTR","METRO                                                 ",
+"catalog_sunat_6_MTK","6","MTK","METRO CUADRADO                                        ",
+"catalog_sunat_6_MTQ","6","MTQ","METRO CUBICO                                          ",
+"catalog_sunat_6_MGM","6","MGM","MILIGRAMOS                                            ",
+"catalog_sunat_6_MLT","6","MLT","MILILITRO                                             ",
+"catalog_sunat_6_MMT","6","MMT","MILIMETRO                                             ",
+"catalog_sunat_6_MMK","6","MMK","MILIMETRO CUADRADO                                    ",
+"catalog_sunat_6_MMQ","6","MMQ","MILIMETRO CUBICO                                      ",
+"catalog_sunat_6_MLL","6","MLL","MILLARES                                              ",
+"catalog_sunat_6_UM","6","UM","MILLON DE UNIDADES                                    ",
+"catalog_sunat_6_ONZ","6","ONZ","ONZAS                                                 ",
+"catalog_sunat_6_PF","6","PF","PALETAS                                               ",
+"catalog_sunat_6_PK","6","PK","PAQUETE                                               ",
+"catalog_sunat_6_PR","6","PR","PAR                                                   ",
+"catalog_sunat_6_FOT","6","FOT","PIES                                                  ",
+"catalog_sunat_6_FTK","6","FTK","PIES CUADRADOS                                        ",
+"catalog_sunat_6_FTQ","6","FTQ","PIES CUBICOS                                          ",
+"catalog_sunat_6_C62","6","C62","PIEZAS                                                ",
+"catalog_sunat_6_PG","6","PG","PLACAS                                                ",
+"catalog_sunat_6_ST","6","ST","PLIEGO                                                ",
+"catalog_sunat_6_INH","6","INH","PULGADAS                                              ",
+"catalog_sunat_6_RM","6","RM","RESMA                                                 ",
+"catalog_sunat_6_DR","6","DR","TAMBOR                                                ",
+"catalog_sunat_6_STN","6","STN","TONELADA CORTA                                        ",
+"catalog_sunat_6_LTN","6","LTN","TONELADA LARGA                                        ",
+"catalog_sunat_6_TNE","6","TNE","TONELADAS                                             ",
+"catalog_sunat_6_TU","6","TU","TUBOS                                                 ",
+"catalog_sunat_6_NIU","6","NIU","UNIDAD (BIENES)                                      ",
+"catalog_sunat_6_ZZ","6","ZZ","UNIDAD (SERVICIOS) ",
+"catalog_sunat_6_GLL","6","GLL","US GALON (3,7843 L)",
+"catalog_sunat_6_YRD","6","YRD","YARDA                                                 ",
+"catalog_sunat_6_YDK","6","YDK","YARDA CUADRADA                                        ",
+"catalog_sunat_7_00","7","00","Otros",
+"catalog_sunat_7_01","7","01","Factura",
+"catalog_sunat_7_02","7","02","Recibo por Honorarios",
+"catalog_sunat_7_03","7","03","Boleta de Venta",
+"catalog_sunat_7_04","7","04","Liquidación de compra",
+"catalog_sunat_7_05","7","05","Boletos de Transporte Aéreo que emiten las Compañías de Aviación Comercial por el servicio de transporte aéreo regular de pasajeros, emitido de manera manual, mecanizada o por medios electrónicos (BME)",
+"catalog_sunat_7_06","7","06","Carta de porte aéreo por el servicio de transporte de carga aérea",
+"catalog_sunat_7_07","7","07","Nota de crédito",
+"catalog_sunat_7_08","7","08","Nota de débito",
+"catalog_sunat_7_09","7","09","Guía de remisión - Remitente",
+"catalog_sunat_7_10","7","10","Recibo por Arrendamiento",
+"catalog_sunat_7_11","7","11","Póliza emitida por las Bolsas de Valores, Bolsas de Productos o Agentes de Intermediación por operaciones realizadas en las Bolsas de Valores o Productos o fuera de las mismas, autorizadas por SMV",
+"catalog_sunat_7_12","7","12","Ticket o cinta emitido por máquina registradora",
+"catalog_sunat_7_13","7","13","Documentos emitidos por las empresas del sistema financiero y de seguros, y por las cooperativas de ahorro y crédito no autorizadas a captar recursos del público, que se encuentren bajo el control de la Superintendencia de Banca, Seguros y AFP.",
+"catalog_sunat_7_14","7","14","Recibo por servicios públicos de suministro de energía eléctrica, agua, teléfono, telex y telegráficos y otros servicios complementarios que se incluyan en el recibo de servicio público",
+"catalog_sunat_7_15","7","15","Boletos emitidos por el servicio de transporte terrestre regular urbano de pasajeros y el ferroviario público de pasajeros prestado en vía férrea local.",
+"catalog_sunat_7_16","7","16","Boletos de viaje emitidos por las empresas de transporte nacional de pasajeros, siempre que cuenten con la autorización de la autoridad competente, en las rutas autorizadas. Vía terrestre o ferroviario público no emitido por medios electrónicos (BVME)",
+"catalog_sunat_7_17","7","17","Documento emitido por la Iglesia Católica por el arrendamiento de bienes inmuebles",
+"catalog_sunat_7_18","7","18","Documento emitido por las Administradoras Privadas de Fondo de Pensiones que se encuentran bajo la supervisión de la Superintendencia de Banca, Seguros y AFP",
+"catalog_sunat_7_19","7","19","Boleto o entrada por atracciones y espectáculos públicos",
+"catalog_sunat_7_20","7","20","Comprobante de Retención",
+"catalog_sunat_7_21","7","21","Conocimiento de embarque por el servicio de transporte de carga marítima",
+"catalog_sunat_7_22","7","22","Comprobante por Operaciones No Habituales",
+"catalog_sunat_7_23","7","23","Pólizas de Adjudicación emitidas con ocasión del remate o adjudicación de bienes por venta forzada, por los martilleros o las entidades que rematen o subasten bienes por cuenta de terceros",
+"catalog_sunat_7_24","7","24","Certificado de pago de regalías emitidas por PERUPETRO S.A",
+"catalog_sunat_7_25","7","25","Documento de Atribución (Ley del Impuesto General a las Ventas e Impuesto Selectivo al Consumo, Art. 19º, último párrafo, R.S. N° 022-98-SUNAT).",
+"catalog_sunat_7_26","7","26","Recibo por el Pago de la Tarifa por Uso de Agua Superficial con fines agrarios y por el pago de la Cuota para la ejecución de una determinada obra o actividad acordada por la Asamblea General de la Comisión de Regantes o Resolución expedida por el Jefe de la Unidad de Aguas y de Riego (Decreto Supremo N° 003-90-AG, Arts. 28 y 48)",
+"catalog_sunat_7_27","7","27","Seguro Complementario de Trabajo de Riesgo",
+"catalog_sunat_7_28","7","28","Documentos emitidos por los servicios aeroportuarios prestados a favor de los pasajeros, mediante mecanismo de etiquetas autoadhesivas.  ",
+"catalog_sunat_7_29","7","29","Documentos emitidos por la COFOPRI en calidad de oferta de venta de terrenos, los correspondientes a las subastas públicas y a la retribución de los servicios que presta",
+"catalog_sunat_7_30","7","30","Documentos emitidos por las empresas que desempeñan el rol adquirente en los sistemas de pago mediante tarjetas de crédito y débito, emitidas por bancos e instituciones financieras o crediticias, domiciliados o no en el país.",
+"catalog_sunat_7_31","7","31","Guía de Remisión - Transportista",
+"catalog_sunat_7_32","7","32","Documentos emitidos por las empresas recaudadoras de la denominada Garantía de Red Principal a la que hace referencia el numeral 7.6 del artículo 7° de la Ley N° 27133 – Ley de Promoción del Desarrollo de la Industria del Gas Natural",
+"catalog_sunat_7_33","7","33","Manifiesto de Pasajeros",
+"catalog_sunat_7_34","7","34","Documento del Operador",
+"catalog_sunat_7_35","7","35","Documento del Partícipe",
+"catalog_sunat_7_36","7","36","Recibo de Distribución de Gas Natural",
+"catalog_sunat_7_37","7","37","Documentos que emitan los concesionarios del servicio de revisiones técnicas vehiculares, por la prestación de dicho servicio",
+"catalog_sunat_7_40","7","40","Comprobante de Percepción",
+"catalog_sunat_7_41","7","41","Comprobante de Percepción - Venta interna",
+"catalog_sunat_7_42","7","42","Documentos emitidos por las empresas que desempeñan el rol adquiriente en los sistemas de pago mediante tarjetas de crédito emitidas por ellas mismas",
+"catalog_sunat_7_43","7","43","Boletos emitidos por las Compañías de Aviación Comercial que prestan servicios de transporte aéreo no regular de pasajeros y transporte aéreo especial de pasajeros.",
+"catalog_sunat_7_44","7","44","Billetes de lotería, rifas y apuestas. ",
+"catalog_sunat_7_45","7","45","Documentos emitidos por centros educativos y culturales, universidades, asociaciones y fundaciones, en lo referente a actividades no gravadas con tributos administrados por la SUNAT.",
+"catalog_sunat_7_46","7","46","Formulario de Declaración - pago o Boleta de pago de tributos Internos",
+"catalog_sunat_7_48","7","48","Comprobante de Operaciones - Ley N° 29972",
+"catalog_sunat_7_49","7","49","Constancia de Depósito - IVAP (Ley 28211)",
+"catalog_sunat_7_50","7","50","Declaración Única de Aduanas - Importación definitiva                 ",
+"catalog_sunat_7_51","7","51","Póliza o DUI Fraccionada",
+"catalog_sunat_7_52","7","52","Despacho Simplificado - Importación Simplificada                        ",
+"catalog_sunat_7_53","7","53","Declaración de Mensajería o Courier                                         ",
+"catalog_sunat_7_54","7","54","Liquidación de Cobranza                                                     ",
+"catalog_sunat_7_55","7","55","BVME para transporte ferroviario de pasajeros",
+"catalog_sunat_7_56","7","56","Comprobante de pago SEAE",
+"catalog_sunat_7_87","7","87","Nota de Crédito Especial",
+"catalog_sunat_7_88","7","88","Nota de Débito Especial",
+"catalog_sunat_7_89","7","89","Nota de Ajuste de Operaciones - Ley N° 29972",
+"catalog_sunat_7_91","7","91","Comprobante de No Domiciliado                                                 ",
+"catalog_sunat_7_96","7","96","Exceso de crédito fiscal por retiro de bienes                           ",
+"catalog_sunat_7_97","7","97","Nota de Crédito - No Domiciliado",
+"catalog_sunat_7_98","7","98","Nota de Débito - No Domiciliado",
+"catalog_sunat_8_019","8","019","TUMBES",
+"catalog_sunat_8_028","8","028","TALARA",
+"catalog_sunat_8_046","8","046","PAITA",
+"catalog_sunat_8_055","8","055","CHICLAYO",
+"catalog_sunat_8_082","8","082","SALAVERRY",
+"catalog_sunat_8_091","8","091","CHIMBOTE",
+"catalog_sunat_8_118","8","118","MARÍTIMA DEL CALLAO",
+"catalog_sunat_8_127","8","127","PISCO",
+"catalog_sunat_8_145","8","145","MOLLENDO MATARANI",
+"catalog_sunat_8_154","8","154","AREQUIPA",
+"catalog_sunat_8_163","8","163","ILO",
+"catalog_sunat_8_172","8","172","TACNA",
+"catalog_sunat_8_181","8","181","PUNO",
+"catalog_sunat_8_190","8","190","CUZCO",
+"catalog_sunat_8_217","8","217","PUCALLPA",
+"catalog_sunat_8_226","8","226","IQUITOS",
+"catalog_sunat_8_235","8","235","AÉREA DEL CALLAO",
+"catalog_sunat_8_244","8","244","POSTAL DE LIMA",
+"catalog_sunat_8_262","8","262","DESAGUADERO",
+"catalog_sunat_8_271","8","271","TARAPOTO",
+"catalog_sunat_8_280","8","280","PUERTO MALDONADO",
+"catalog_sunat_8_299","8","299","LA TINA",
+"catalog_sunat_8_884","8","884","DEPENDENCIA FERROVIARIA TACNA",
+"catalog_sunat_8_893","8","893","DEPENDENCIA POSTAL TACNA",
+"catalog_sunat_8_910","8","910","DEPENDENCIA POSTAL AREQUIPA",
+"catalog_sunat_8_929","8","929","COMPLEJO FRONTERIZO STA ROSA TACNA",
+"catalog_sunat_8_938","8","938","TERMINAL TERRESTRE TACNA",
+"catalog_sunat_8_947","8","947","AEROPUERTO TACNA",
+"catalog_sunat_8_956","8","956","CETICOS TACNA",
+"catalog_sunat_8_965","8","965","DEPENDENCIA POSTAL DE SALAVERRY",
+"catalog_sunat_9_01","9","01","VENTA NACIONAL",
+"catalog_sunat_9_02","9","02","COMPRA NACIONAL",
+"catalog_sunat_9_03","9","03","CONSIGNACIÓN RECIBIDA",
+"catalog_sunat_9_04","9","04","CONSIGNACIÓN ENTREGADA",
+"catalog_sunat_9_05","9","05","DEVOLUCIÓN RECIBIDA",
+"catalog_sunat_9_06","9","06","DEVOLUCIÓN ENTREGADA",
+"catalog_sunat_9_07","9","07","BONIFICACIÓN",
+"catalog_sunat_9_08","9","08","PREMIO",
+"catalog_sunat_9_09","9","09","DONACIÓN",
+"catalog_sunat_9_10","9","10","SALIDA A PRODUCCIÓN",
+"catalog_sunat_9_11","9","11","SALIDA POR TRANSFERENCIA ENTRE ALMACENES ",
+"catalog_sunat_9_12","9","12","RETIRO",
+"catalog_sunat_9_13","9","13","MERMAS",
+"catalog_sunat_9_14","9","14","DESMEDROS",
+"catalog_sunat_9_15","9","15","DESTRUCCIÓN",
+"catalog_sunat_9_16","9","16","SALDO INICIAL",
+"catalog_sunat_9_17","9","17","EXPORTACIÓN",
+"catalog_sunat_9_18","9","18","IMPORTACIÓN",
+"catalog_sunat_9_19","9","19","ENTRADA DE PRODUCCIÓN",
+"catalog_sunat_9_20","9","20","ENTRADA POR DEVOLUCIÓN DE PRODUCCIÓN",
+"catalog_sunat_9_21","9","21","ENTRADA POR TRANSFERENCIA ENTRE ALMACENES ",
+"catalog_sunat_9_22","9","22","ENTRADA POR IDENTIFICACIÓN ERRONEA",
+"catalog_sunat_9_23","9","23","SALIDA POR IDENTIFICACIÓN ERRONEA",
+"catalog_sunat_9_24","9","24","ENTRADA POR DEVOLUCIÓN DEL CLIENTE",
+"catalog_sunat_9_25","9","25","SALIDA POR DEVOLUCIÓN AL PROVEEDOR",
+"catalog_sunat_9_26","9","26","ENTRADA PARA SERVICIO DE PRODUCCIÓN",
+"catalog_sunat_9_27","9","27","SALIDA POR SERVICIO DE PRODUCCIÓN",
+"catalog_sunat_9_28","9","28","AJUSTE POR DIFERENCIA DE INVENTARIO",
+"catalog_sunat_9_29","9","29","ENTRADA DE BIENES EN PRÉSTAMO",
+"catalog_sunat_9_30","9","30","SALIDA DE BIENES EN PRÉSTAMO",
+"catalog_sunat_9_31","9","31","ENTRADA DE BIENES EN CUSTODIA",
+"catalog_sunat_9_32","9","32","SALIDA DE BIENES EN CUSTODIA",
+"catalog_sunat_9_33","9","33","MUESTRAS MÉDICAS",
+"catalog_sunat_9_34","9","34","PUBLICIDAD",
+"catalog_sunat_9_35","9","35","GASTOS DE REPRESENTACIÓN",
+"catalog_sunat_9_36","9","36","RETIRO PARA ENTREGA A TRABAJADORES",
+"catalog_sunat_9_37","9","37","RETIRO POR CONVENIO COLECTIVO",
+"catalog_sunat_9_38","9","38","RETIRO POR SUSTITUCIÓN DE BIEN SINIESTRADO",
+"catalog_sunat_9_91","9","91","OTROS 1",
+"catalog_sunat_9_92","9","92","OTROS 2",
+"catalog_sunat_9_93","9","93","OTROS 3",
+"catalog_sunat_9_94","9","94","OTROS 4",
+"catalog_sunat_9_95","9","95","OTROS 5",
+"catalog_sunat_9_96","9","96","OTROS 6",
+"catalog_sunat_9_97","9","97","OTROS 7",
+"catalog_sunat_9_98","9","98","OTROS 8",
+"catalog_sunat_9_99","9","99","OTROS ",
+"catalog_sunat_10_1","10","1","NACIONES UNIDAS",
+"catalog_sunat_10_3","10","3","GS1 (EAN-UCC)",
+"catalog_sunat_10_9","10","9","OTROS",
+"catalog_sunat_11_1","11","1","PROMEDIO PONDERADO",
+"catalog_sunat_11_2","11","2","PRIMERAS ENTRADAS, PRIMERAS SALIDAS",
+"catalog_sunat_11_3","11","3","EXISTENCIAS BÁSICAS",
+"catalog_sunat_11_4","11","4","DETALLISTA",
+"catalog_sunat_11_5","11","5","IDENTIFICACIÓN ESPECÍFICA",
+"catalog_sunat_11_9","11","9","OTROS",
+"catalog_sunat_12_01","12","01","VALORES EMITIDOS O GARANTIZADOS POR EL ESTADO",
+"catalog_sunat_12_02","12","02","VALORES EMITIDOS O GARANTIZADOS POR EL SISTEMA FINANCIERO",
+"catalog_sunat_12_03","12","03","VALORES EMITIDOS POR LA EMPRESA",
+"catalog_sunat_12_04","12","04","OTROS INSTRUMENTOS FINANCIEROS REPRESENTATIVOS DE DEUDA",
+"catalog_sunat_12_05","12","05","CERTIFICADOS DE SUSCRIPCIÓN PREFERENTE",
+"catalog_sunat_12_06","12","06","ACCIONES REPRESENTATIVAS DE CAPITAL SOCIAL",
+"catalog_sunat_12_07","12","07","ACCIONES DE INVERSIÓN",
+"catalog_sunat_12_08","12","08","CERTIFICADO DE PARTICIPACIÓN DE FONDOS",
+"catalog_sunat_12_09","12","09","ASOCIACIONES EN PARTICIPACIÓN Y CONSORCIOS",
+"catalog_sunat_12_10","12","10","OTROS INSTRUMENTOS FINANCIEROS REPRESENTATIVOS DE DERECHO PATRIMONIAL",
+"catalog_sunat_12_99","12","99","OTROS TÍTULOS",
+"catalog_sunat_13_01","13","01","ACCIONES CON DERECHO A VOTO",
+"catalog_sunat_13_02","13","02","ACCIONES SIN DERECHO A VOTO",
+"catalog_sunat_13_03","13","03","PARTICIPACIONES",
+"catalog_sunat_13_04","13","04","OTROS",
+"catalog_sunat_14_01","14","01","PLAN CONTABLE GENERAL EMPRESARIAL",
+"catalog_sunat_14_02","14","02","PLAN CONTABLE GENERAL REVISADO",
+"catalog_sunat_14_03","14","03","PLAN DE CUENTAS PARA EMPRESAS DEL SISTEMA FINANCIERO, SUPERVISADAS POR SBS",
+"catalog_sunat_14_04","14","04","PLAN DE CUENTAS PARA ENTIDADES PRESTADORAS DE SALUD, SUPERVISADAS POR SBS",
+"catalog_sunat_14_05","14","05","PLAN DE CUENTAS PARA EMPRESAS DEL SISTEMA ASEGURADOR, SUPERVISADAS POR SBS",
+"catalog_sunat_14_06","14","06","PLAN DE CUENTAS DE LAS ADMINISTRADORAS PRIVADAS DE FONDOS DE PENSIONES, SUPERVISADAS POR SBS",
+"catalog_sunat_14_07","14","07","PLAN CONTABLE GUBERNAMENTAL",
+"catalog_sunat_14_99","14","99","OTROS",
+"catalog_sunat_15_1","15","1","NO REVALUADO O REVALUADO SIN EFECTO TRIBUTARIO",
+"catalog_sunat_15_2","15","2","REVALUADO CON EFECTO TRIBUTARIO",
+"catalog_sunat_16_1","16","1","ACTIVOS EN DESUSO",
+"catalog_sunat_16_2","16","2","ACTIVOS OBSOLETOS",
+"catalog_sunat_16_9","16","9","RESTO DE ACTIVOS",
+"catalog_sunat_17_1","17","1","LINEA RECTA",
+"catalog_sunat_17_2","17","2","UNIDADES PRODUCIDAS",
+"catalog_sunat_17_9","17","9","OTROS",
+"catalog_sunat_18_1","18","1","PROCESO PRODUCTIVO",
+"catalog_sunat_18_2","18","2","LÍNEA DE PRODUCCIÓN",
+"catalog_sunat_18_3","18","3","PRODUCTO",
+"catalog_sunat_18_4","18","4","PROYECTO",
+"catalog_sunat_18_9","18","9","OTROS",
+"catalog_sunat_19_01","19","01","SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR DIVERSAS - INDIVIDUAL",
+"catalog_sunat_19_02","19","02","SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR SEGUROS - INDIVIDUAL",
+"catalog_sunat_19_03","19","03","SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR BANCOS Y FINANCIERAS - INDIVIDUAL",
+"catalog_sunat_19_04","19","04","SUPERINTENDENCIA DEL MERCADO DE VALORES - ADMINISTRADORAS DE FONDOS DE PENSIONES (AFP)",
+"catalog_sunat_19_05","19","05","SUPERINTENDENCIA DEL MERCADO DE VALORES - AGENTES DE INTERMEDIACIÓN",
+"catalog_sunat_19_06","19","06","SUPERINTENDENCIA DEL MERCADO DE VALORES - FONDOS DE INVERSIÓN",
+"catalog_sunat_19_07","19","07","SUPERINTENDENCIA DEL MERCADO DE VALORES - PATRIMONIO EN FIDEICOMISOS",
+"catalog_sunat_19_08","19","08","SUPERINTENDENCIA DEL MERCADO DE VALORES - ICLV",
+"catalog_sunat_19_09","19","09","OTROS NO CONSIDERADOS EN LOS ANTERIORES",
+"catalog_sunat_20_00","20","00","NINGUNO",
+"catalog_sunat_20_01","20","01","CANADA",
+"catalog_sunat_20_02","20","02","CHILE",
+"catalog_sunat_20_03","20","03","COMUNIDAD ANDINA DE NACIONES (CAN)",
+"catalog_sunat_20_04","20","04","BRASIL",
+"catalog_sunat_20_05","20","05","ESTADOS UNIDOS MEXICANOS",
+"catalog_sunat_20_06","20","06","REPUBLICA DE COREA",
+"catalog_sunat_20_07","20","07","CONFEDERACIÓN SUIZA",
+"catalog_sunat_20_08","20","08","PORTUGAL",
+"catalog_sunat_20_09","20","09","OTROS",
+"catalog_sunat_21_1","21",1,"MERCADERIA, MATERIA PRIMA, SUMINISTRO, ENVASES Y EMBALAJES",
+"catalog_sunat_21_2","21",2,"ACTIVO FIJO",
+"catalog_sunat_21_3","21",3,"OTROS ACTIVOS NO CONSIDERADOS EN LOS NUMERALES 1 Y 2",
+"catalog_sunat_21_4","21",4,"GASTOS DE EDUCACIÓN, RECREACIÓN, SALUD, CULTURALES. REPRESENTACIÓN, CAPACITACIÓN, DE VIAJE, MANTENIMIENTO DE VEHICULO Y  DE PREMIOS",
+"catalog_sunat_21_5","21",5,"OTROS GASTOS NO INCLUIDOS EN EL NUMERAL 4",
+"catalog_sunat_22_1","22",1,"SERVICIO PRESTADO INTEGRAMENTE EN EL PERÚ",
+"catalog_sunat_22_2","22",2,"SERVICIO PRESTADO PARTE EN EL PERÚ Y PARTE EN EL EXTRANJERO",
+"catalog_sunat_22_3","22",3,"SERVICIO PRESTADO EXCLUSIVAMENTE EN EL EXTRANJERO",
+"catalog_sunat_23_1","23",1,"Los intereses provenientes de créditos de fomento otorgados directamente o mediante proveedores o intermediarios financieros por organismos internacionales o instituciones gubernamentales extranjeras.",
+"catalog_sunat_23_2","23",2,"Las rentas de los inmuebles de propiedad de organismos internacionales que les sirvan de sede. ",
+"catalog_sunat_23_3","23",3,"Las remuneraciones que perciban, por el ejercicio de su cargo en el país, los funcionarios y empleados considerados como tales dentro de la estructura organizacional de los gobiernos extranjeros, instituciones oficiales extranjeras y organismos internacionales, siempre que los convenios constitutivos así lo establezcan. ",
+"catalog_sunat_23_4","23",4,"Los ingresos brutos que perciben las representaciones deportivas nacionales de países extranjeros por sus actuaciones en el país.",
+"catalog_sunat_23_5","23",5,"Las regalías por asesoramiento técnico, económico, financiero, o de otra índole, prestados desde el exterior por entidades estatales u organismos internacionales.",
+"catalog_sunat_23_6","23",6,"Los ingresos extranjeros por los espectáculos en vivo de teatro, zarzuela, conciertos de música clásica, ópera, opereta, ballet y folclor, calificados como espectáculos públicos culturales por el Instituto Nacional de Cultura, realizados en el país. brutos que perciben las representaciones de países. ",
+"catalog_sunat_24_9001","24",9001,"BOUVET ISLAND",
+"catalog_sunat_24_9002","24",9002,"COTE D'IVOIRE",
+"catalog_sunat_24_9003","24",9003,"FALKLAND ISLANDS (MALVINAS)",
+"catalog_sunat_24_9004","24",9004,"FRANCE, METROPOLITAN",
+"catalog_sunat_24_9005","24",9005,"FRENCH SOUTHERN TERRITORIES",
+"catalog_sunat_24_9006","24",9006,"HEARD AND MC DONALD ISLANDS",
+"catalog_sunat_24_9007","24",9007,"MAYOTTE",
+"catalog_sunat_24_9008","24",9008,"SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS",
+"catalog_sunat_24_9009","24",9009,"SVALBARD AND JAN MAYEN ISLANDS",
+"catalog_sunat_24_9010","24",9010,"UNITED STATES MINOR OUTLYING ISLANDS",
+"catalog_sunat_24_9011","24",9011,"OTROS PAISES O LUGARES",
+"catalog_sunat_24_9013","24",9013,"AFGANISTAN",
+"catalog_sunat_24_9017","24",9017,"ALBANIA",
+"catalog_sunat_24_9019","24",9019,"ALDERNEY",
+"catalog_sunat_24_9023","24",9023,"ALEMANIA",
+"catalog_sunat_24_9026","24",9026,"ARMENIA",
+"catalog_sunat_24_9027","24",9027,"ARUBA",
+"catalog_sunat_24_9028","24",9028,"ASCENCI?N",
+"catalog_sunat_24_9029","24",9029,"BOSNIA-HERZEGOVINA",
+"catalog_sunat_24_9031","24",9031,"BURKINA FASO",
+"catalog_sunat_24_9037","24",9037,"ANDORRA",
+"catalog_sunat_24_9040","24",9040,"ANGOLA",
+"catalog_sunat_24_9041","24",9041,"ANGUILLA",
+"catalog_sunat_24_9043","24",9043,"ANTIGUA Y BARBUDA",
+"catalog_sunat_24_9047","24",9047,"ANTILLAS HOLANDESAS",
+"catalog_sunat_24_9053","24",9053,"ARABIA SAUDITA",
+"catalog_sunat_24_9059","24",9059,"ARGELIA",
+"catalog_sunat_24_9063","24",9063,"ARGENTINA",
+"catalog_sunat_24_9069","24",9069,"AUSTRALIA",
+"catalog_sunat_24_9072","24",9072,"AUSTRIA",
+"catalog_sunat_24_9074","24",9074,"AZERBAIJAN",
+"catalog_sunat_24_9077","24",9077,"BAHAMAS",
+"catalog_sunat_24_9080","24",9080,"BAHREIN",
+"catalog_sunat_24_9081","24",9081,"BANGLADESH",
+"catalog_sunat_24_9083","24",9083,"BARBADOS",
+"catalog_sunat_24_9087","24",9087,"BELGICA",
+"catalog_sunat_24_9088","24",9088,"BELICE",
+"catalog_sunat_24_9090","24",9090,"BERMUDAS",
+"catalog_sunat_24_9091","24",9091,"BELARUS",
+"catalog_sunat_24_9093","24",9093,"MYANMAR",
+"catalog_sunat_24_9097","24",9097,"BOLIVIA",
+"catalog_sunat_24_9101","24",9101,"BOTSWANA",
+"catalog_sunat_24_9105","24",9105,"BRASIL",
+"catalog_sunat_24_9108","24",9108,"BRUNEI DARUSSALAM",
+"catalog_sunat_24_9111","24",9111,"BULGARIA",
+"catalog_sunat_24_9115","24",9115,"BURUNDI",
+"catalog_sunat_24_9119","24",9119,"BUTAN",
+"catalog_sunat_24_9127","24",9127,"CABO VERDE",
+"catalog_sunat_24_9137","24",9137,"CAIMAN,ISLAS",
+"catalog_sunat_24_9141","24",9141,"CAMBOYA",
+"catalog_sunat_24_9145","24",9145,"CAMERUN,REPUBLICA UNIDA DEL",
+"catalog_sunat_24_9147","24",9147,"CAMPIONE D?TALIA",
+"catalog_sunat_24_9149","24",9149,"CANADA",
+"catalog_sunat_24_9155","24",9155,"CANAL (NORMANDAS), ISLAS",
+"catalog_sunat_24_9157","24",9157,"CANTON Y ENDERBURRY",
+"catalog_sunat_24_9159","24",9159,"SANTA SEDE",
+"catalog_sunat_24_9165","24",9165,"COCOS (KEELING),ISLAS",
+"catalog_sunat_24_9169","24",9169,"COLOMBIA",
+"catalog_sunat_24_9173","24",9173,"COMORAS",
+"catalog_sunat_24_9177","24",9177,"CONGO",
+"catalog_sunat_24_9183","24",9183,"COOK, ISLAS",
+"catalog_sunat_24_9187","24",9187,"COREA (NORTE), REPUBLICA POPULAR DEMOCRATICA DE",
+"catalog_sunat_24_9190","24",9190,"COREA (SUR), REPUBLICA DE",
+"catalog_sunat_24_9193","24",9193,"COSTA DE MARFIL",
+"catalog_sunat_24_9196","24",9196,"COSTA RICA",
+"catalog_sunat_24_9198","24",9198,"CROACIA",
+"catalog_sunat_24_9199","24",9199,"CUBA",
+"catalog_sunat_24_9203","24",9203,"CHAD",
+"catalog_sunat_24_9207","24",9207,"CHECOSLOVAQUIA",
+"catalog_sunat_24_9211","24",9211,"CHILE",
+"catalog_sunat_24_9215","24",9215,"CHINA",
+"catalog_sunat_24_9218","24",9218,"TAIWAN (FORMOSA)",
+"catalog_sunat_24_9221","24",9221,"CHIPRE",
+"catalog_sunat_24_9229","24",9229,"BENIN",
+"catalog_sunat_24_9232","24",9232,"DINAMARCA",
+"catalog_sunat_24_9235","24",9235,"DOMINICA",
+"catalog_sunat_24_9239","24",9239,"ECUADOR",
+"catalog_sunat_24_9240","24",9240,"EGIPTO",
+"catalog_sunat_24_9242","24",9242,"EL SALVADOR",
+"catalog_sunat_24_9243","24",9243,"ERITREA",
+"catalog_sunat_24_9244","24",9244,"EMIRATOS ARABES UNIDOS",
+"catalog_sunat_24_9245","24",9245,"ESPA?A",
+"catalog_sunat_24_9246","24",9246,"ESLOVAQUIA",
+"catalog_sunat_24_9247","24",9247,"ESLOVENIA",
+"catalog_sunat_24_9249","24",9249,"ESTADOS UNIDOS",
+"catalog_sunat_24_9251","24",9251,"ESTONIA",
+"catalog_sunat_24_9253","24",9253,"ETIOPIA",
+"catalog_sunat_24_9259","24",9259,"FEROE, ISLAS",
+"catalog_sunat_24_9267","24",9267,"FILIPINAS",
+"catalog_sunat_24_9271","24",9271,"FINLANDIA",
+"catalog_sunat_24_9275","24",9275,"FRANCIA",
+"catalog_sunat_24_9281","24",9281,"GABON",
+"catalog_sunat_24_9285","24",9285,"GAMBIA",
+"catalog_sunat_24_9286","24",9286,"GAZA Y JERICO",
+"catalog_sunat_24_9287","24",9287,"GEORGIA",
+"catalog_sunat_24_9289","24",9289,"GHANA",
+"catalog_sunat_24_9293","24",9293,"GIBRALTAR",
+"catalog_sunat_24_9297","24",9297,"GRANADA",
+"catalog_sunat_24_9301","24",9301,"GRECIA",
+"catalog_sunat_24_9305","24",9305,"GROENLANDIA",
+"catalog_sunat_24_9309","24",9309,"GUADALUPE",
+"catalog_sunat_24_9313","24",9313,"GUAM",
+"catalog_sunat_24_9317","24",9317,"GUATEMALA",
+"catalog_sunat_24_9325","24",9325,"GUAYANA FRANCESA",
+"catalog_sunat_24_9327","24",9327,"GUERNSEY",
+"catalog_sunat_24_9329","24",9329,"GUINEA",
+"catalog_sunat_24_9331","24",9331,"GUINEA ECUATORIAL",
+"catalog_sunat_24_9334","24",9334,"GUINEA-BISSAU",
+"catalog_sunat_24_9337","24",9337,"GUYANA",
+"catalog_sunat_24_9341","24",9341,"HAITI",
+"catalog_sunat_24_9345","24",9345,"HONDURAS",
+"catalog_sunat_24_9348","24",9348,"HONDURAS BRITANICAS",
+"catalog_sunat_24_9351","24",9351,"HONG KONG",
+"catalog_sunat_24_9355","24",9355,"HUNGRIA",
+"catalog_sunat_24_9361","24",9361,"INDIA",
+"catalog_sunat_24_9365","24",9365,"INDONESIA",
+"catalog_sunat_24_9369","24",9369,"IRAK",
+"catalog_sunat_24_9372","24",9372,"IRAN, REPUBLICA ISLAMICA DEL",
+"catalog_sunat_24_9375","24",9375,"IRLANDA (EIRE)",
+"catalog_sunat_24_9377","24",9377,"ISLA AZORES",
+"catalog_sunat_24_9378","24",9378,"ISLA DEL MAN",
+"catalog_sunat_24_9379","24",9379,"ISLANDIA",
+"catalog_sunat_24_9380","24",9380,"ISLAS CANARIAS",
+"catalog_sunat_24_9381","24",9381,"ISLAS DE CHRISTMAS",
+"catalog_sunat_24_9382","24",9382,"ISLAS QESHM",
+"catalog_sunat_24_9383","24",9383,"ISRAEL",
+"catalog_sunat_24_9386","24",9386,"ITALIA",
+"catalog_sunat_24_9391","24",9391,"JAMAICA",
+"catalog_sunat_24_9395","24",9395,"JONSTON, ISLAS",
+"catalog_sunat_24_9399","24",9399,"JAPON",
+"catalog_sunat_24_9401","24",9401,"JERSEY",
+"catalog_sunat_24_9403","24",9403,"JORDANIA",
+"catalog_sunat_24_9406","24",9406,"KAZAJSTAN",
+"catalog_sunat_24_9410","24",9410,"KENIA",
+"catalog_sunat_24_9411","24",9411,"KIRIBATI",
+"catalog_sunat_24_9412","24",9412,"KIRGUIZISTAN",
+"catalog_sunat_24_9413","24",9413,"KUWAIT",
+"catalog_sunat_24_9418","24",9418,"LABUN",
+"catalog_sunat_24_9420","24",9420,"LAOS, REPUBLICA POPULAR DEMOCRATICA DE",
+"catalog_sunat_24_9426","24",9426,"LESOTHO",
+"catalog_sunat_24_9429","24",9429,"LETONIA",
+"catalog_sunat_24_9431","24",9431,"LIBANO",
+"catalog_sunat_24_9434","24",9434,"LIBERIA",
+"catalog_sunat_24_9438","24",9438,"LIBIA",
+"catalog_sunat_24_9440","24",9440,"LIECHTENSTEIN",
+"catalog_sunat_24_9443","24",9443,"LITUANIA",
+"catalog_sunat_24_9445","24",9445,"LUXEMBURGO",
+"catalog_sunat_24_9447","24",9447,"MACAO",
+"catalog_sunat_24_9448","24",9448,"MACEDONIA",
+"catalog_sunat_24_9450","24",9450,"MADAGASCAR",
+"catalog_sunat_24_9453","24",9453,"MADEIRA",
+"catalog_sunat_24_9455","24",9455,"MALAYSIA",
+"catalog_sunat_24_9458","24",9458,"MALAWI",
+"catalog_sunat_24_9461","24",9461,"MALDIVAS",
+"catalog_sunat_24_9464","24",9464,"MALI",
+"catalog_sunat_24_9467","24",9467,"MALTA",
+"catalog_sunat_24_9469","24",9469,"MARIANAS DEL NORTE, ISLAS",
+"catalog_sunat_24_9472","24",9472,"MARSHALL, ISLAS",
+"catalog_sunat_24_9474","24",9474,"MARRUECOS",
+"catalog_sunat_24_9477","24",9477,"MARTINICA",
+"catalog_sunat_24_9485","24",9485,"MAURICIO",
+"catalog_sunat_24_9488","24",9488,"MAURITANIA",
+"catalog_sunat_24_9493","24",9493,"MEXICO",
+"catalog_sunat_24_9494","24",9494,"MICRONESIA, ESTADOS FEDERADOS DE",
+"catalog_sunat_24_9495","24",9495,"MIDWAY ISLAS",
+"catalog_sunat_24_9496","24",9496,"MOLDAVIA",
+"catalog_sunat_24_9497","24",9497,"MONGOLIA",
+"catalog_sunat_24_9498","24",9498,"MONACO",
+"catalog_sunat_24_9501","24",9501,"MONTSERRAT, ISLA",
+"catalog_sunat_24_9505","24",9505,"MOZAMBIQUE",
+"catalog_sunat_24_9507","24",9507,"NAMIBIA",
+"catalog_sunat_24_9508","24",9508,"NAURU",
+"catalog_sunat_24_9511","24",9511,"NAVIDAD (CHRISTMAS), ISLA",
+"catalog_sunat_24_9517","24",9517,"NEPAL",
+"catalog_sunat_24_9521","24",9521,"NICARAGUA",
+"catalog_sunat_24_9525","24",9525,"NIGER",
+"catalog_sunat_24_9528","24",9528,"NIGERIA",
+"catalog_sunat_24_9531","24",9531,"NIUE, ISLA",
+"catalog_sunat_24_9535","24",9535,"NORFOLK, ISLA",
+"catalog_sunat_24_9538","24",9538,"NORUEGA",
+"catalog_sunat_24_9542","24",9542,"NUEVA CALEDONIA",
+"catalog_sunat_24_9545","24",9545,"PAPUASIA NUEVA GUINEA",
+"catalog_sunat_24_9548","24",9548,"NUEVA ZELANDA",
+"catalog_sunat_24_9551","24",9551,"VANUATU",
+"catalog_sunat_24_9556","24",9556,"OMAN",
+"catalog_sunat_24_9566","24",9566,"PACIFICO, ISLAS DEL",
+"catalog_sunat_24_9573","24",9573,"PAISES BAJOS",
+"catalog_sunat_24_9576","24",9576,"PAKISTAN",
+"catalog_sunat_24_9578","24",9578,"PALAU, ISLAS",
+"catalog_sunat_24_9579","24",9579,"TERRITORIO AUTONOMO DE PALESTINA.",
+"catalog_sunat_24_9580","24",9580,"PANAMA",
+"catalog_sunat_24_9586","24",9586,"PARAGUAY",
+"catalog_sunat_24_9589","24",9589,"PERU",
+"catalog_sunat_24_9593","24",9593,"PITCAIRN, ISLA",
+"catalog_sunat_24_9599","24",9599,"POLINESIA FRANCESA",
+"catalog_sunat_24_9603","24",9603,"POLONIA",
+"catalog_sunat_24_9607","24",9607,"PORTUGAL",
+"catalog_sunat_24_9611","24",9611,"PUERTO RICO",
+"catalog_sunat_24_9618","24",9618,"QATAR",
+"catalog_sunat_24_9628","24",9628,"REINO UNIDO",
+"catalog_sunat_24_9629","24",9629,"ESCOCIA",
+"catalog_sunat_24_9633","24",9633,"REPUBLICA ARABE UNIDA",
+"catalog_sunat_24_9640","24",9640,"REPUBLICA CENTROAFRICANA",
+"catalog_sunat_24_9644","24",9644,"REPUBLICA CHECA",
+"catalog_sunat_24_9645","24",9645,"REPUBLICA DE SWAZILANDIA",
+"catalog_sunat_24_9646","24",9646,"REPUBLICA DE TUNEZ",
+"catalog_sunat_24_9647","24",9647,"REPUBLICA DOMINICANA",
+"catalog_sunat_24_9660","24",9660,"REUNION",
+"catalog_sunat_24_9665","24",9665,"ZIMBABWE",
+"catalog_sunat_24_9670","24",9670,"RUMANIA",
+"catalog_sunat_24_9675","24",9675,"RUANDA",
+"catalog_sunat_24_9676","24",9676,"RUSIA",
+"catalog_sunat_24_9677","24",9677,"SALOMON, ISLAS",
+"catalog_sunat_24_9685","24",9685,"SAHARA OCCIDENTAL",
+"catalog_sunat_24_9687","24",9687,"SAMOA OCCIDENTAL",
+"catalog_sunat_24_9690","24",9690,"SAMOA NORTEAMERICANA",
+"catalog_sunat_24_9695","24",9695,"SAN CRISTOBAL Y NIEVES",
+"catalog_sunat_24_9697","24",9697,"SAN MARINO",
+"catalog_sunat_24_9700","24",9700,"SAN PEDRO Y MIQUELON",
+"catalog_sunat_24_9705","24",9705,"SAN VICENTE Y LAS GRANADINAS",
+"catalog_sunat_24_9710","24",9710,"SANTA ELENA",
+"catalog_sunat_24_9715","24",9715,"SANTA LUCIA",
+"catalog_sunat_24_9720","24",9720,"SANTO TOME Y PRINCIPE",
+"catalog_sunat_24_9728","24",9728,"SENEGAL",
+"catalog_sunat_24_9731","24",9731,"SEYCHELLES",
+"catalog_sunat_24_9735","24",9735,"SIERRA LEONA",
+"catalog_sunat_24_9741","24",9741,"SINGAPUR",
+"catalog_sunat_24_9744","24",9744,"SIRIA, REPUBLICA ARABE DE",
+"catalog_sunat_24_9748","24",9748,"SOMALIA",
+"catalog_sunat_24_9750","24",9750,"SRI LANKA",
+"catalog_sunat_24_9756","24",9756,"SUDAFRICA, REPUBLICA DE",
+"catalog_sunat_24_9759","24",9759,"SUDAN",
+"catalog_sunat_24_9764","24",9764,"SUECIA",
+"catalog_sunat_24_9767","24",9767,"SUIZA",
+"catalog_sunat_24_9770","24",9770,"SURINAM",
+"catalog_sunat_24_9773","24",9773,"SAWSILANDIA",
+"catalog_sunat_24_9774","24",9774,"TADJIKISTAN",
+"catalog_sunat_24_9776","24",9776,"TAILANDIA",
+"catalog_sunat_24_9780","24",9780,"TANZANIA, REPUBLICA UNIDA DE",
+"catalog_sunat_24_9783","24",9783,"DJIBOUTI",
+"catalog_sunat_24_9786","24",9786,"TERRITORIO ANTARTICO BRITANICO",
+"catalog_sunat_24_9787","24",9787,"TERRITORIO BRITANICO DEL OCEANO INDICO",
+"catalog_sunat_24_9788","24",9788,"TIMOR DEL ESTE",
+"catalog_sunat_24_9800","24",9800,"TOGO",
+"catalog_sunat_24_9805","24",9805,"TOKELAU",
+"catalog_sunat_24_9810","24",9810,"TONGA",
+"catalog_sunat_24_9815","24",9815,"TRINIDAD Y TOBAGO",
+"catalog_sunat_24_9816","24",9816,"TRISTAN DA CUNHA",
+"catalog_sunat_24_9820","24",9820,"TUNICIA",
+"catalog_sunat_24_9823","24",9823,"TURCAS Y CAICOS, ISLAS",
+"catalog_sunat_24_9825","24",9825,"TURKMENISTAN",
+"catalog_sunat_24_9827","24",9827,"TURQUIA",
+"catalog_sunat_24_9828","24",9828,"TUVALU",
+"catalog_sunat_24_9830","24",9830,"UCRANIA",
+"catalog_sunat_24_9833","24",9833,"UGANDA",
+"catalog_sunat_24_9840","24",9840,"URSS",
+"catalog_sunat_24_9845","24",9845,"URUGUAY",
+"catalog_sunat_24_9847","24",9847,"UZBEKISTAN",
+"catalog_sunat_24_9850","24",9850,"VENEZUELA",
+"catalog_sunat_24_9855","24",9855,"VIET NAM",
+"catalog_sunat_24_9858","24",9858,"VIETNAM (DEL NORTE)",
+"catalog_sunat_24_9863","24",9863,"VIRGENES, ISLAS (BRITANICAS)",
+"catalog_sunat_24_9866","24",9866,"VIRGENES, ISLAS (NORTEAMERICANAS)",
+"catalog_sunat_24_9870","24",9870,"FIJI",
+"catalog_sunat_24_9873","24",9873,"WAKE, ISLA",
+"catalog_sunat_24_9875","24",9875,"WALLIS Y FORTUNA, ISLAS",
+"catalog_sunat_24_9880","24",9880,"YEMEN",
+"catalog_sunat_24_9885","24",9885,"YUGOSLAVIA",
+"catalog_sunat_24_9888","24",9888,"ZAIRE",
+"catalog_sunat_24_9890","24",9890,"ZAMBIA",
+"catalog_sunat_24_9895","24",9895,"ZONA DEL CANAL DE PANAMA",
+"catalog_sunat_24_9896","24",9896,"ZONA LIBRE OSTRAVA",
+"catalog_sunat_24_9897","24",9897,"ZONA NEUTRAL (PALESTINA)",

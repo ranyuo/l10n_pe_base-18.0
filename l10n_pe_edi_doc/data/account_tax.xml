@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    
+    <record id="l10n_pe_edi_tax_tip" model="account.tax">
+        <field name="name">Propina</field>
+        <field name="description">Este registro de propina como impuesto permite validar la factura electrónica, por ello el porcentaje es cero</field>
+        <field name="amount_type">percent</field>
+        <field name="amount">0</field>
+        <field name="l10n_pe_edi_is_tip" eval="1"/>
+        <field name="type_tax_use">sale</field>
+        <field name="l10n_pe_edi_tax_code">9999</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>   
+
+</odoo>

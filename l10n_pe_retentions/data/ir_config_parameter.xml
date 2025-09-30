@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+<!--
+    <record id="l10n_pe_retention_percentage" model="ir.config_parameter">
+        <field name="key">retention_percentage</field>    
+        <field name="value">3</field>
+    </record>
+    
+    <record id="l10n_pe_amount_min_retention" model="ir.config_parameter">
+        <field name="key">amount_min_retention</field>    
+        <field name="value">700</field>
+    </record>-->
+</odoo>
