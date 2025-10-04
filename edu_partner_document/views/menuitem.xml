@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="edu_partner_document_root_menu"
+        name="Certificados"
+        web_icon="edu_partner_document,static/description/icon.png"
+        sequence="10"/>
+        
+    <menuitem
+        id="edu_partner_document_grades_menu"
+        name="Grados"
+        action="action_edu_partner_document"
+        parent="edu_partner_document.edu_partner_document_root_menu"
+        sequence="10"/>
+    <menuitem
+        id="edu_partner_document_config_menu"
+        name="Configuración"
+        parent="edu_partner_document.edu_partner_document_root_menu"
+        sequence="100"/>
+    
+    <menuitem
+        id="edu_document_type_menu"
+        name="Tipos de documento"
+        action="action_edu_document_type"
+        parent="edu_partner_document.edu_partner_document_config_menu"
+        sequence="10"/>
+    <menuitem
+        id="edu_educational_institution_menu"
+        name="Instituciones educativas"
+        action="action_edu_educational_institution"
+        parent="edu_partner_document.edu_partner_document_config_menu"
+        sequence="20"/>
+</odoo>

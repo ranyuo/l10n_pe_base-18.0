@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View edu.educational.institution View List -->
+    <record id="view_edu_educational_institution_list" model="ir.ui.view">
+        <field name="name">view.edu.educational.institution.list</field>
+        <field name="model">edu.educational.institution</field>
+        <field name="arch" type="xml">
+            <list string="Instituciones educativas" editable="bottom">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action edu.educational.institution -->
+    <record id="action_edu_educational_institution" model="ir.actions.act_window">
+        <field name="name">Instituciones educativas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">edu.educational.institution</field>
+        <field name="view_mode">list</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Educational Institution.
+            </p>
+        </field>
+    </record>
+
+</odoo>
