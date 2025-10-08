@@ -1,0 +1,52 @@
+<odoo>
+
+    <template id="helpdesk_ticket_search_page" name="Helpdesk Ticket Search Page">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <h1 class="text-center">Estado de tu expediente</h1>
+
+                <form action="/helpdesk-ticket-search" method="get" class="mb-4">
+                    <div class="input-group">
+                        <input type="text" name="search" class="form-control"
+                               placeholder="# de expediente"
+                               t-att-value="search"/>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-search" /> Buscar</button>
+                    </div>
+                </form>
+
+                <t t-if="helpdesk_ticket">
+                    <div class="table-responsive">
+                        <table class="table table-striped caption-top">
+                            <caption>Datos generales</caption>
+                            <tbody>
+                                <tr>
+                                    <th>N° Expediente</th>
+                                    <td><t t-esc="helpdesk_ticket.ticket_ref or ''"/></td>
+                                    <th class="text-end">Fecha de ingreso</th>
+                                    <td class="text-end"><t t-esc="helpdesk_ticket.create_date.strftime('%d/%m/%Y') or ''"/></td>
+                                    <th class="text-end">Situación Actual</th>
+                                    <td class="text-end"><t t-esc="helpdesk_ticket.stage_id.name or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Nombre/Razón social</th>
+                                    <td colspan="5"><t t-esc="helpdesk_ticket.partner_id.name or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Nombre trámite</th>
+                                    <td colspan="5"><t t-esc="helpdesk_ticket.name or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <td colspan="5"><t t-esc="helpdesk_ticket.description or ''"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+                <t t-else="">
+                    <p>No se encontraron documentos.</p>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>
