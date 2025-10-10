@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="edu_class_schedule_root_menu"
+        name="Horarios"
+        web_icon="edu_class_schedule,static/description/icon.png"
+        sequence="10"/>
+    
+    <menuitem
+        id="edu_class_schedule_menu"
+        name="Horarios"
+        action="action_edu_class_schedule"
+        parent="edu_class_schedule.edu_class_schedule_root_menu"
+        sequence="10"/>
+    
+    <menuitem
+    id="edu_class_schedule_config_menu"
+    name="Configuración"
+    parent="edu_class_schedule.edu_class_schedule_root_menu"
+    sequence="100"/>
+    <menuitem
+        id="edu_academic_period_menu"
+        name="Año y semestre"
+        action="action_edu_academic_period"
+        parent="edu_class_schedule.edu_class_schedule_config_menu"
+        sequence="10"/>
+    <menuitem
+        id="edu_career_menu"
+        name="Carreras"
+        action="action_edu_career"
+        parent="edu_class_schedule.edu_class_schedule_config_menu"
+        sequence="20"/>
+    <menuitem
+        id="edu_classroom_menu"
+        name="Aulas"
+        action="action_edu_classroom"
+        parent="edu_class_schedule.edu_class_schedule_config_menu"
+        sequence="30"/>
+    <menuitem
+        id="edu_course_menu"
+        name="Cursos"
+        action="action_edu_course"
+        parent="edu_class_schedule.edu_class_schedule_config_menu"
+        sequence="40"/>
+
+</odoo>

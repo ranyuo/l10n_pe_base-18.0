@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_edu_academic_period,edu_class_schedule.edu.partner.document,model_edu_academic_period,base.group_user,1,1,1,1
+access_edu_career,edu_class_schedule.edu.career,model_edu_career,base.group_user,1,1,1,1
+access_edu_class_schedule,edu_class_schedule.edu.class.schedule,model_edu_class_schedule,base.group_user,1,1,1,1
+access_edu_classroom,edu_class_schedule.edu.classroom,model_edu_classroom,base.group_user,1,1,1,1
+access_edu_course,edu_class_schedule.edu.course,model_edu_course,base.group_user,1,1,1,1

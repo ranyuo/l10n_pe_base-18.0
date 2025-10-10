@@ -1,0 +1,166 @@
+<odoo>
+
+    <template id="schedule_page" name="Horarios de clases">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <h1>Horario de Clases</h1>
+
+                <!-- Incluir flatpickr desde CDN -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+                <!-- Formulario de búsqueda: las fechas se muestran dd/mm/yyyy -->
+                <form action="/class-schedule" method="get" class="row g-3 mb-4 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label">Curso</label>
+                        <select name="course_id" class="form-select">
+                            <option value="">-- Seleccionar curso --</option>
+                            <t t-foreach="courses" t-as="c">
+                                <option t-att-value="c.id" t-att-selected="c.id == course_id">
+                                    <t t-esc="c.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Carrera</label>
+                        <select name="career_id" class="form-select">
+                            <option value="">-- Seleccionar carrera --</option>
+                            <t t-foreach="careers" t-as="cr">
+                                <option t-att-value="cr.id" t-att-selected="cr.id == career_id">
+                                    <t t-esc="cr.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label">Desde</label>
+                        <!-- El valor puede llegar como 'YYYY-MM-DD' o 'DD/MM/YYYY' -->
+                        <input type="text" name="date_start" class="form-control"
+                               placeholder="dd/mm/yyyy"
+                               t-att-value="date_start"/>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label">Hasta</label>
+                        <input type="text" name="date_end" class="form-control"
+                               placeholder="dd/mm/yyyy"
+                               t-att-value="date_end"/>
+                    </div>
+
+                    <div class="col-md-2 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary flex-fill">Buscar</button>
+                        <a href="/class-schedule" class="btn btn-secondary flex-fill">Limpiar</a>
+                    </div>
+                </form>
+
+                <!-- Tabla de resultados -->
+                <t t-if="schedules">
+                    <div class="table-responsive" style="font-size: 12px;">
+                        <table class="table table-striped table-small">
+                            <thead>
+                                <tr>
+                                    <th>Carrera</th>
+                                    <th>Curso</th>
+                                    <th>Semestre</th>
+                                    <th>Docente</th>
+                                    <th>Tipo</th>
+                                    <th>Aula</th>
+                                    <th>Enlace</th>
+                                    <th>Inicio</th>
+                                    <th>Finalización</th>
+                                    <th>Duración</th>
+                                    <th>Break</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="schedules" t-as="s">
+                                    <tr>
+                                        <td><t t-esc="s['career']"/></td>
+                                        <td><t t-esc="s['course']"/></td>
+                                        <td><t t-esc="s['period']"/></td>
+                                        <td><t t-esc="s['partner']"/></td>
+                                        <td><t t-esc="s['type']"/></td>
+                                        <td><t t-esc="s['classroom']"/></td>
+                                        <td><t t-esc="s['link']"/></td>
+                                        <td><t t-esc="s['start_datetime']"/></td>
+                                        <td><t t-esc="s['end_datetime']"/></td>
+                                        <td><t t-esc="s['duration']"/></td>
+                                        <td><t t-esc="s['break']"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+                <t t-else="">
+                    <p class="text-muted">No se encontraron horarios en ese rango de fechas.</p>
+                </t>
+
+                <!-- Paginación -->
+                <t t-if="pages &gt; 1">
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item" t-att-class="page == 1 and 'disabled'">
+                                <a class="page-link"
+                                   t-att-href="'/class-schedule/page/%s?course_id=%s&amp;career_id=%s&amp;date_start=%s&amp;date_end=%s' % (page-1, course_id or '', career_id or '', date_start or '', date_end or '')">Anterior</a>
+                            </li>
+
+                            <t t-foreach="range(1, pages+1)" t-as="p">
+                                <li class="page-item" t-att-class="p == page and 'active'">
+                                    <a class="page-link"
+                                       t-att-href="'/class-schedule/page/%s?course_id=%s&amp;career_id=%s&amp;date_start=%s&amp;date_end=%s' % (p, course_id or '', career_id or '', date_start or '', date_end or '')">
+                                        <t t-esc="p"/>
+                                    </a>
+                                </li>
+                            </t>
+
+                            <li class="page-item" t-att-class="page == pages and 'disabled'">
+                                <a class="page-link"
+                                   t-att-href="'/class-schedule/page/%s?course_id=%s&amp;career_id=%s&amp;date_start=%s&amp;date_end=%s' % (page+1, course_id or '', career_id or '', date_start or '', date_end or '')">Siguiente</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </t>
+
+                <!-- Inicializar flatpickr: muestra dd/mm/yyyy (altInput) y envía YYYY-MM-DD -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        function normalizeToIso(val){
+                            if(!val) return null;
+                            if(/^\d{4}-\d{2}-\d{2}$/.test(val)) return val; // yyyy-mm-dd
+                            if(/^\d{2}\/\d{2}\/\d{4}$/.test(val)){
+                                const parts = val.split('/');
+                                return parts[2] + '-' + parts[1] + '-' + parts[0]; // dd/mm/yyyy -> yyyy-mm-dd
+                            }
+                            return null;
+                        }
+
+                        const start = document.querySelector("input[name='date_start']");
+                        const end = document.querySelector("input[name='date_end']");
+
+                        [start, end].forEach(function(el){
+                            if(!el) return;
+                            const defaultISO = normalizeToIso(el.value);
+                            flatpickr(el, {
+                                altInput: true,
+                                altFormat: "d/m/Y",
+                                dateFormat: "Y-m-d",
+                                allowInput: true,
+                                defaultDate: defaultISO,
+                            });
+                            // dejar placeholder visible para inputs sin valor
+                            if(!el.value){
+                                el.placeholder = 'dd/mm/yyyy';
+                            }
+                        });
+                    });
+                </script>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>

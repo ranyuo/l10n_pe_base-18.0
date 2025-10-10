@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View edu.class.schedule View List -->
+    <record id="view_edu_class_schedule_list" model="ir.ui.view">
+        <field name="name">view.edu.class.schedule.list</field>
+        <field name="model">edu.class.schedule</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="career_id"/>
+                <field name="course_id"/>
+                <field name="academic_period_id"/>
+                <field name="partner_id" optional="show"/>
+                <field name="class_type" optional="hide"/>
+                <field name="classroom_id" optional="hide"/>
+                <field name="link" optional="hide" />
+                <field name="start_class" optional="show"/>
+                <field name="end_class" optional="show"/>
+                <field name="duration" optional="hide" />
+                <field name="break_time" optional="hide" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View edu.class.schedule form -->
+    <record id="view_edu_class_schedule_form" model="ir.ui.view">
+        <field name="name">view.edu.class.schedule.form</field>
+        <field name="model">edu.class.schedule</field>
+        <field name="arch" type="xml">
+            <form string="Edu Class Schedule">
+                <sheet>
+                    <!-- <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div> -->
+                    <group>
+                        <group>
+                            <field name="career_id" options="{'no_create': True}"/>
+                            <field name="course_id" options="{'no_create': True}"/>
+                            <field name="academic_period_id" options="{'no_create': True}"/>
+                            <field name="partner_id" options="{'no_create': True}"/>
+                            <field name="class_type"/>
+                            <field name="classroom_id" options="{'no_create': True}"/>
+                            <field name="link"/>
+                        </group>
+                        <group>
+                            <field name="start_class"/>
+                            <field name="end_class"/>
+                            <field name="duration"/>
+                            <field name="break_time"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View edu.class.schedule search -->
+    <!-- <record id="view_edu_class_schedule_search" model="ir.ui.view">
+        <field name="name">view.edu.class.schedule.search</field>
+        <field name="model">edu.class.schedule</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record> -->
+
+    <!-- Action edu.class.schedule -->
+    <record id="action_edu_class_schedule" model="ir.actions.act_window">
+        <field name="name">Horarios</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">edu.class.schedule</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new: Horario.
+            </p>
+        </field>
+    </record>
+
+</odoo>

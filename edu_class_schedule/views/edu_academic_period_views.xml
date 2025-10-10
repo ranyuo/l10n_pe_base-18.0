@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View edu.academic.period View List -->
+    <record id="view_edu_academic_period_list" model="ir.ui.view">
+        <field name="name">view.edu.academic.period.list</field>
+        <field name="model">edu.academic.period</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View edu.academic.period form -->
+    <!-- <record id="view_edu_academic_period_form" model="ir.ui.view">
+        <field name="name">view.edu.academic.period.form</field>
+        <field name="model">edu.academic.period</field>
+        <field name="arch" type="xml">
+            <form string="Edu Academic Period">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record> -->
+
+    <!-- View edu.academic.period search -->
+    <record id="view_edu_academic_period_search" model="ir.ui.view">
+        <field name="name">view.edu.academic.period.search</field>
+        <field name="model">edu.academic.period</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="filter_name" string="Nombre" domain="[('name', '=', 'value')]" context="{'group_by': 'name'}" />
+                <!-- <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group> -->
+            </search>
+        </field>
+    </record>
+
+    <!-- Action edu.academic.period -->
+    <record id="action_edu_academic_period" model="ir.actions.act_window">
+        <field name="name">Año y semestre</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">edu.academic.period</field>
+        <field name="view_mode">list</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new: AÑo y semestre.
+            </p>
+        </field>
+    </record>
+
+</odoo>
