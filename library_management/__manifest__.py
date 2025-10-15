@@ -11,6 +11,8 @@
     'category': 'Uncategorized',
     'depends': ['base'],
     'data': [
+        # El archivo de seguridad se añade aquí, al principio de la lista.
+        'security/ir.model.access.csv',
         'views/library_book_views.xml',
     ],
     'application': True,
