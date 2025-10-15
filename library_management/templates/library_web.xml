@@ -22,14 +22,18 @@
                                         <th>Título</th>
                                         <th>Autor</th>
                                         <th>Ubicación</th>
-                                    </tr>
+                                        <th>Estado</th> </tr>
                                 </thead>
                                 <tbody>
                                     <t t-foreach="books" t-as="book">
-                                        <tr class="table-success">
+                                        <tr t-attf-class="{{ 'table-success' if book.is_available else 'table-danger' }}">
                                             <td><t t-esc="book.name"/></td>
                                             <td><t t-esc="book.author"/></td>
                                             <td><t t-esc="book.address_id.name"/></td>
+                                            <td>
+                                                <t t-if="book.is_available">Disponible</t>
+                                                <t t-else="">No Disponible</t>
+                                            </td>
                                         </tr>
                                     </t>
                                 </tbody>
