@@ -40,6 +40,11 @@
             <field name="res_model">library.address</field>
             <field name="view_mode">list,form</field>
         </record>
-        <menuitem id="library_address_menu" name="Direcciones" parent="library_management.library_menu_root" action="library_address_action" sequence="20"/>
+
+        <menuitem id="library_address_menu"
+                  name="Direcciones"
+                  parent="library_management.library_menu_root"
+                  action="library_address_action"
+                  sequence="20"/>
     </data>
 </odoo>
