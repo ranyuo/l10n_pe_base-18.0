@@ -14,6 +14,7 @@
         # El archivo de seguridad se añade aquí, al principio de la lista.
         'security/ir.model.access.csv',
         'views/library_book_views.xml',
+        'views/library_address_views.xml',
     ],
     'application': True,
     'installable': True,
