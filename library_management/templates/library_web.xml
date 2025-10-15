@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="book_list_template" name="Lista de Libros de la Biblioteca">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container mt-4">
+                    <h1>Nuestra Colección de Libros</h1>
+
+                    <form action="/biblioteca" method="get" class="mb-4">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Buscar por título..." t-att-value="search"/>
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                    </form>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="books" t-as="book">
+                                <tr>
+                                    <td><t t-esc="book.name"/></td>
+                                    <td><t t-esc="book.author"/></td>
+                                    <td><t t-esc="book.address_id.name"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </t>
+    </template>
+    
+    <record id="menu_library" model="website.menu">
+        <field name="name">Biblioteca</field>
+        <field name="url">/biblioteca</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">30</field>
+    </record>
+
+</odoo>

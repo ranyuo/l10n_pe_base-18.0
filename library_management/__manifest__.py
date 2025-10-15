@@ -9,12 +9,13 @@
     'author': "Tu Nombre",
     'website': "https://www.tuweb.com",
     'category': 'Uncategorized',
-    'depends': ['base'],
+    'depends': ['base', 'website'],
+    
     'data': [
-        # El archivo de seguridad se añade aquí, al principio de la lista.
         'security/ir.model.access.csv',
         'views/library_book_views.xml',
         'views/library_address_views.xml',
+        'templates/library_web.xml', 
     ],
     'application': True,
     'installable': True,
