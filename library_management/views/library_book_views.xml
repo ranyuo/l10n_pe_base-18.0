@@ -2,8 +2,9 @@
 <odoo>
     <data>
 
-        <record id="library_book_view_tree" model="ir.ui.view">
-            <field name="name">library.book.list</field> <field name="model">library.book</field>
+        <record id="library_book_view_list" model="ir.ui.view">
+            <field name="name">library.book.list</field>
+            <field name="model">library.book</field>
             <field name="arch" type="xml">
                 <list string="Libros">
                     <field name="name"/>
