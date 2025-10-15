@@ -13,24 +13,40 @@
                         </div>
                     </form>
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Título</th>
-                                <th>Autor</th>
-                                <th>Ubicación</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <t t-foreach="books" t-as="book">
-                                <tr>
-                                    <td><t t-esc="book.name"/></td>
-                                    <td><t t-esc="book.author"/></td>
-                                    <td><t t-esc="book.address_id.name"/></td>
-                                </tr>
-                            </t>
-                        </tbody>
-                    </table>
+                    <t t-if="search">
+                        <t t-if="books">
+                            <h2>Resultados para '<t t-esc="search"/>'</h2>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Autor</th>
+                                        <th>Ubicación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="books" t-as="book">
+                                        <tr>
+                                            <td><t t-esc="book.name"/></td>
+                                            <td><t t-esc="book.author"/></td>
+                                            <td><t t-esc="book.address_id.name"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                        <t t-else="">
+                            <div class="alert alert-warning" role="alert">
+                                No se encontraron resultados para su búsqueda: "<strong><t t-esc="search"/></strong>".
+                            </div>
+                        </t>
+                    </t>
+                    
+                    <t t-else="">
+                        <div class="alert alert-info" role="alert">
+                            Por favor, ingrese un término en la barra de búsqueda para encontrar un libro.
+                        </div>
+                    </t>
 
                 </div>
             </div>

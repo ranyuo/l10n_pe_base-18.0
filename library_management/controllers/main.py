@@ -7,21 +7,24 @@ class LibraryWebsite(http.Controller):
     @http.route('/biblioteca', type='http', auth='public', website=True)
     def show_books(self, search="", **kwargs):
         """
-        Esta función se ejecuta cuando un usuario visita la URL /biblioteca.
-        Muestra la lista de libros y maneja la búsqueda.
+        Esta función ahora solo busca libros si se proporciona un término de búsqueda.
         """
-        # Dominio de búsqueda: busca libros cuyo título contenga el texto de búsqueda.
-        # 'ilike' no distingue entre mayúsculas y minúsculas.
-        domain = [('name', 'ilike', search)]
+        # Inicializamos la lista de libros como una lista vacía.
+        books = []
         
-        # Realizamos la búsqueda en el modelo 'library.book'
-        books = request.env['library.book'].search(domain)
+        # --- LÓGICA MODIFICADA ---
+        # Solo si el usuario ha escrito algo en la caja de búsqueda...
+        if search:
+            # ...realizamos la búsqueda en la base de datos.
+            domain = [('name', 'ilike', search)]
+            books = request.env['library.book'].search(domain)
         
-        # Preparamos los valores que enviaremos a la plantilla
+        # Preparamos los valores que enviaremos a la plantilla.
+        # 'books' estará vacío en la carga inicial, o lleno si hubo una búsqueda.
         values = {
             'books': books,
-            'search': search, # Para recordar el texto buscado en la caja de búsqueda
+            'search': search,
         }
         
-        # Renderizamos la plantilla y le pasamos los valores
+        # Renderizamos la plantilla como antes.
         return request.render('library_management.book_list_template', values)
