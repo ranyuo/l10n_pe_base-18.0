@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
         <record id="library_book_view_list" model="ir.ui.view">
             <field name="name">library.book.list</field>
             <field name="model">library.book</field>
@@ -9,7 +8,7 @@
                 <list string="Libros">
                     <field name="name"/>
                     <field name="author"/>
-                    <field name="address_id"/> 
+                    <field name="address_id"/>
                     <field name="is_available"/>
                 </list>
             </field>
@@ -24,7 +23,7 @@
                         <group>
                             <field name="name"/>
                             <field name="author"/>
-                            <field name="address_id"/> 
+                            <field name="address_id"/>
                             <field name="is_available"/>
                         </group>
                     </sheet>
@@ -32,5 +31,11 @@
             </field>
         </record>
         
-        </data>
+        <record id="library_book_action" model="ir.actions.act_window">
+            <field name="name">Libros</field>
+            <field name="res_model">library.book</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        <menuitem id="library_book_menu" name="Libros" parent="library_management.library_menu_root" action="library_book_action" sequence="10"/>
+    </data>
 </odoo>
