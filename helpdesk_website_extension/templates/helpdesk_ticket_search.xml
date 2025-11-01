@@ -16,6 +16,13 @@
 
                 <t t-if="helpdesk_ticket">
                     <div class="table-responsive">
+                        <div class="d-flex justify-content-end mb-2">
+                            <a class="btn btn-secondary"
+                               t-att-href="'/helpdesk-ticket/%s/print' % helpdesk_ticket.id"
+                               target="_blank">
+                                <i class="fa fa-print"/> Imprimir
+                            </a>
+                        </div>
                         <table class="table table-striped caption-top">
                             <caption>Datos generales</caption>
                             <tbody>
@@ -47,6 +54,48 @@
                     <p>No se encontraron documentos.</p>
                 </t>
             </div>
+        </t>
+    </template>
+
+    <template id="helpdesk_ticket_print_page" name="Helpdesk Ticket Print Page">
+        <t t-call="website.layout">
+            <t t-set="title">Impresión de expediente</t>
+            <t t-set="hide_header">True</t>
+            <t t-set="hide_footer">True</t>
+            <div class="container mt-4">
+                <div class="text-center mb-4">
+                    <h1>Expediente #<t t-esc="helpdesk_ticket.ticket_ref or ''"/></h1>
+                </div>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th style="width: 35%;">N° Expediente</th>
+                            <td><t t-esc="helpdesk_ticket.ticket_ref or ''"/></td>
+                        </tr>
+                        <tr>
+                            <th>Fecha de ingreso</th>
+                            <td><t t-esc="helpdesk_ticket.create_date.strftime('%d/%m/%Y') or ''"/></td>
+                        </tr>
+                        <tr>
+                            <th>Situación Actual</th>
+                            <td><t t-esc="helpdesk_ticket.stage_id.name or ''"/></td>
+                        </tr>
+                        <tr>
+                            <th>Nombre/Razón social</th>
+                            <td><t t-esc="helpdesk_ticket.partner_id.name or ''"/></td>
+                        </tr>
+                        <tr>
+                            <th>Nombre trámite</th>
+                            <td><t t-esc="helpdesk_ticket.name or ''"/></td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td><t t-esc="helpdesk_ticket.description or ''"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <t t-set="website_scripts" t-value="(website_scripts or '') + '\n<script>window.addEventListener(\'load\', function(){ window.print(); });</script>'"/>
         </t>
     </template>
 </odoo>

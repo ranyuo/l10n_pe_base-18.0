@@ -17,9 +17,28 @@ class WebsiteHelpdeskTicket(http.Controller):
         if search:
             domain = [('ticket_ref', '=', search)]
             HelpdeskTicket = request.env['helpdesk.ticket'].sudo()
-            helpdesk_ticket = HelpdeskTicket.search(domain)
+            helpdesk_ticket = HelpdeskTicket.search(domain, limit=1)
 
         return request.render("helpdesk_website_extension.helpdesk_ticket_search_page", {
             'helpdesk_ticket': helpdesk_ticket,
             'search': search
         })
+
+    @http.route(
+        '/helpdesk-ticket/<int:ticket_id>/print',
+        type='http',
+        auth="public",
+        website=True,
+    )
+    def helpdesk_ticket_print(self, ticket_id, **kwargs):
+        HelpdeskTicket = request.env['helpdesk.ticket'].sudo()
+        ticket = HelpdeskTicket.browse(ticket_id)
+        if not ticket.exists():
+            return request.not_found()
+
+        return request.render(
+            "helpdesk_website_extension.helpdesk_ticket_print_page",
+            {
+                'helpdesk_ticket': ticket,
+            },
+        )
