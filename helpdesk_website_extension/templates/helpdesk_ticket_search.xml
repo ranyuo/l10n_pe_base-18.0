@@ -95,7 +95,7 @@
                     </tbody>
                 </table>
             </div>
-            <t t-set="website_scripts" t-value="(website_scripts or '') + '\n<script>window.addEventListener(\'load\', function(){ window.print(); });</script>'"/>
+            <t t-set="website_scripts" t-value="(website_scripts or '') + '\n&lt;script&gt;window.addEventListener(\'load\', function(){ window.print(); });&lt;/script&gt;'"/>
         </t>
     </template>
 </odoo>
