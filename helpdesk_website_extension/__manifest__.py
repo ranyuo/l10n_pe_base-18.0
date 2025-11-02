@@ -12,7 +12,8 @@
         'website'
     ],
     "data": [
-        "templates/helpdesk_ticket_search.xml"
+        "templates/helpdesk_ticket_search.xml",
+        "report/helpdesk_ticket_report.xml",
     ],
     'auto_install': False,
     'application': False,
