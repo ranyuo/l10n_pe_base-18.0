@@ -16,11 +16,16 @@
 
                 <t t-if="helpdesk_ticket">
                     <div class="table-responsive">
-                        <div class="d-flex justify-content-end mb-2">
+                        <div class="d-flex justify-content-end mb-2 gap-2">
                             <a class="btn btn-secondary"
                                t-att-href="'/helpdesk-ticket/%s/print' % helpdesk_ticket.id"
                                target="_blank">
                                 <i class="fa fa-print"/> Imprimir
+                            </a>
+                            <a class="btn btn-secondary"
+                               t-att-href="'/helpdesk-ticket/%s/pdf' % helpdesk_ticket.id"
+                               target="_blank">
+                                <i class="fa fa-download"/> Descargar PDF
                             </a>
                         </div>
                         <table class="table table-striped caption-top">
@@ -98,4 +103,64 @@
             <t t-set="website_scripts" t-value="(website_scripts or '') + '\n&lt;script&gt;window.addEventListener(\'load\', function(){ window.print(); });&lt;/script&gt;'"/>
         </t>
     </template>
+
+    <template id="report_helpdesk_ticket_pdf_document" name="Helpdesk Ticket PDF Document">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <h2 style="text-align:center;">Expediente #<span t-esc="doc.ticket_ref or ''"/></h2>
+                    <table class="table table-sm o_main_table" style="width:100%; margin-top:16px;">
+                        <tbody>
+                            <tr>
+                                <th style="text-align:left; padding:4px; width:35%;">N° Expediente</th>
+                                <td style="padding:4px;">
+                                    <span t-esc="doc.ticket_ref or ''"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:left; padding:4px;">Fecha de ingreso</th>
+                                <td style="padding:4px;">
+                                    <span t-esc="(doc.create_date and doc.create_date.strftime('%d/%m/%Y')) or ''"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:left; padding:4px;">Situación Actual</th>
+                                <td style="padding:4px;">
+                                    <span t-esc="doc.stage_id.name or ''"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:left; padding:4px;">Nombre/Razón social</th>
+                                <td style="padding:4px;">
+                                    <span t-esc="doc.partner_id.name or ''"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:left; padding:4px;">Nombre trámite</th>
+                                <td style="padding:4px;">
+                                    <span t-esc="doc.name or ''"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:left; padding:4px;">Descripción</th>
+                                <td style="padding:4px;">
+                                    <span t-esc="doc.description or ''"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="action_report_helpdesk_ticket"
+        model="helpdesk.ticket"
+        string="Expediente"
+        report_type="qweb-pdf"
+        name="helpdesk_website_extension.report_helpdesk_ticket_pdf_document"
+        file="helpdesk_website_extension.report_helpdesk_ticket_pdf_document"
+        print_report_name="(object.ticket_ref or object.name or 'Expediente').replace('/', '-')"
+    />
 </odoo>
