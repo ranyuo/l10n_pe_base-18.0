@@ -1,11 +1,10 @@
 <odoo>
-    <report
-        id="action_report_helpdesk_ticket"
-        model="helpdesk.ticket"
-        string="Expediente"
-        report_type="qweb-pdf"
-        name="helpdesk_website_extension.report_helpdesk_ticket_pdf_document"
-        file="helpdesk_website_extension.report_helpdesk_ticket_pdf_document"
-        print_report_name="(object.ticket_ref or object.name or 'Expediente').replace('/', '-')"
-    />
+    <record id="action_report_helpdesk_ticket" model="ir.actions.report">
+        <field name="name">Expediente</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">helpdesk_website_extension.report_helpdesk_ticket_pdf_document</field>
+        <field name="report_file">helpdesk_website_extension.report_helpdesk_ticket_pdf_document</field>
+        <field name="print_report_name">(object.ticket_ref or object.name or 'Expediente').replace('/', '-')</field>
+    </record>
 </odoo>
