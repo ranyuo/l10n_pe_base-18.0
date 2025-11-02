@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <menuitem id="menu_medical_history_root" name="Historia Clínica" sequence="10"/>
+
+        <menuitem id="menu_medical_history" name="Historias Clínicas" parent="menu_medical_history_root" action="action_medical_clinical_history" sequence="10"/>
+
+        <menuitem id="menu_medical_history_masters" name="Tablas Maestras" parent="menu_medical_history_root" sequence="20"/>
+        <menuitem id="menu_medical_document_type" name="Tipos de Documento" parent="menu_medical_history_masters" action="action_medical_document_type" sequence="10"/>
+        <menuitem id="menu_medical_insurance_type" name="Tipos de Seguro" parent="menu_medical_history_masters" action="action_medical_insurance_type" sequence="20"/>
+        <menuitem id="menu_medical_blood_group" name="Grupos Sanguíneos" parent="menu_medical_history_masters" action="action_medical_blood_group" sequence="30"/>
+        <menuitem id="menu_medical_rh_factor" name="Factores RH" parent="menu_medical_history_masters" action="action_medical_rh_factor" sequence="40"/>
+        <menuitem id="menu_medical_civil_status" name="Estados Civiles" parent="menu_medical_history_masters" action="action_medical_civil_status" sequence="50"/>
+        <menuitem id="menu_medical_ethnicity" name="Grupos Étnicos" parent="menu_medical_history_masters" action="action_medical_ethnicity" sequence="60"/>
+        <menuitem id="menu_medical_education_level" name="Grados de Instrucción" parent="menu_medical_history_masters" action="action_medical_education_level" sequence="70"/>
+        <menuitem id="menu_medical_religion" name="Religiones" parent="menu_medical_history_masters" action="action_medical_religion" sequence="80"/>
+        <menuitem id="menu_medical_occupation" name="Ocupaciones" parent="menu_medical_history_masters" action="action_medical_occupation" sequence="90"/>
+        <menuitem id="menu_medical_location" name="Ubicaciones Geográficas" parent="menu_medical_history_masters" action="action_medical_location" sequence="100"/>
+        <menuitem id="menu_medical_biological_state" name="Funciones Biológicas" parent="menu_medical_history_masters" action="action_medical_biological_state" sequence="110"/>
+        <menuitem id="menu_medical_disease_course" name="Cursos de Enfermedad" parent="menu_medical_history_masters" action="action_medical_disease_course" sequence="120"/>
+    </data>
+</odoo>
