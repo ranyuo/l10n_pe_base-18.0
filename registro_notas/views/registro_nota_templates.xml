@@ -30,8 +30,8 @@
                                     <tbody>
                                         <t t-foreach="records" t-as="record">
                                             <tr>
-                                                <td><t t-esc="record.course_name"/></td>
-                                                <td><t t-esc="record.career_name"/></td>
+                                                <td><t t-esc="record.course_id.name"/></td>
+                                                <td><t t-esc="record.career_id.name"/></td>
                                                 <td><t t-esc="record.grade"/></td>
                                                 <td><t t-esc="record.observation or ''"/></td>
                                             </tr>

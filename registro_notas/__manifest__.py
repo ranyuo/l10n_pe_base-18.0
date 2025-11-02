@@ -11,6 +11,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/registro_nota_views.xml',
+        'views/registro_maestro_views.xml',
         'views/registro_nota_menu.xml',
         'views/registro_nota_templates.xml',
     ],
