@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_registro_notas_root" name="Registro de Notas" sequence="10"/>
+    <menuitem id="menu_registro_notas" name="Notas de Alumnos" parent="menu_registro_notas_root" action="action_registro_nota" sequence="10"/>
+</odoo>
