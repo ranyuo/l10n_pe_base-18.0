@@ -1,0 +1,514 @@
+<odoo>
+    <data>
+        <!-- Medical Clinical History -->
+        <record id="view_medical_clinical_history_tree" model="ir.ui.view">
+            <field name="name">medical.clinical.history.tree</field>
+            <field name="model">medical.clinical.history</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Paciente"/>
+                    <field name="document_type_id"/>
+                    <field name="document_number"/>
+                    <field name="evaluation_date"/>
+                    <field name="insurance_type_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_clinical_history_form" model="ir.ui.view">
+            <field name="name">medical.clinical.history.form</field>
+            <field name="model">medical.clinical.history</field>
+            <field name="arch" type="xml">
+                <form string="Historia Clínica">
+                    <sheet>
+                        <group>
+                            <group string="Paciente">
+                                <field name="paternal_last_name"/>
+                                <field name="maternal_last_name"/>
+                                <field name="given_names"/>
+                                <field name="document_type_id"/>
+                                <field name="document_number"/>
+                                <field name="birth_date"/>
+                                <field name="sex"/>
+                            </group>
+                            <group string="Cobertura y Evaluación">
+                                <field name="insurance_type_id"/>
+                                <field name="insurance_number"/>
+                                <field name="blood_group_id"/>
+                                <field name="rh_factor_id"/>
+                                <field name="evaluation_date"/>
+                                <field name="evaluation_time" widget="float_time"/>
+                                <group string="Edad" col="3">
+                                    <field name="age_years"/>
+                                    <field name="age_months"/>
+                                    <field name="age_days"/>
+                                </group>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Filiación">
+                                <group>
+                                    <group>
+                                        <field name="civil_status_id"/>
+                                        <field name="ethnicity_id"/>
+                                        <field name="education_level_id"/>
+                                        <field name="religion_id"/>
+                                        <field name="occupation_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="phone"/>
+                                        <field name="mobile"/>
+                                        <field name="address"/>
+                                    </group>
+                                </group>
+                                <group string="Lugar de Nacimiento" col="3">
+                                    <field name="birth_department_id"/>
+                                    <field name="birth_province_id"/>
+                                    <field name="birth_district_id"/>
+                                </group>
+                                <group string="Lugar de Residencia" col="3">
+                                    <field name="residence_department_id"/>
+                                    <field name="residence_province_id"/>
+                                    <field name="residence_district_id"/>
+                                </group>
+                                <group string="Familia">
+                                    <group>
+                                        <field name="father_name"/>
+                                        <field name="father_age"/>
+                                        <field name="father_education_level_id"/>
+                                        <field name="father_occupation_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="mother_name"/>
+                                        <field name="mother_age"/>
+                                        <field name="mother_education_level_id"/>
+                                        <field name="mother_occupation_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="spouse_name"/>
+                                        <field name="spouse_age"/>
+                                        <field name="spouse_education_level_id"/>
+                                        <field name="spouse_occupation_id"/>
+                                    </group>
+                                </group>
+                                <group string="Responsable">
+                                    <field name="responsible_name"/>
+                                    <field name="responsible_document"/>
+                                    <field name="responsible_phone"/>
+                                </group>
+                            </page>
+                            <page string="Enfermedad Actual">
+                                <group>
+                                    <group>
+                                        <field name="disease_duration"/>
+                                        <field name="disease_course_id"/>
+                                    </group>
+                                    <field name="main_symptoms" widget="text"/>
+                                    <field name="related_story" widget="text"/>
+                                    <group string="Exámenes Previos">
+                                        <field name="previous_auxiliary_tests" widget="text"/>
+                                        <field name="previous_auxiliary_results" widget="text"/>
+                                    </group>
+                                    <field name="previous_treatment" widget="text"/>
+                                </group>
+                            </page>
+                            <page string="Funciones Biológicas">
+                                <group col="2">
+                                    <field name="sleep_state_id"/>
+                                    <field name="appetite_state_id"/>
+                                    <field name="thirst_state_id"/>
+                                    <field name="urine_state_id"/>
+                                    <field name="stool_state_id"/>
+                                </group>
+                                <field name="notes" widget="text"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_clinical_history" model="ir.actions.act_window">
+            <field name="name">Historias Clínicas</field>
+            <field name="res_model">medical.clinical.history</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_medical_clinical_history_tree"/>
+        </record>
+
+        <!-- Master Data Views -->
+        <record id="view_medical_document_type_tree" model="ir.ui.view">
+            <field name="name">medical.document.type.tree</field>
+            <field name="model">medical.document.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_document_type_form" model="ir.ui.view">
+            <field name="name">medical.document.type.form</field>
+            <field name="model">medical.document.type</field>
+            <field name="arch" type="xml">
+                <form string="Tipo de Documento">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_document_type" model="ir.actions.act_window">
+            <field name="name">Tipos de Documento</field>
+            <field name="res_model">medical.document.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_insurance_type_tree" model="ir.ui.view">
+            <field name="name">medical.insurance.type.tree</field>
+            <field name="model">medical.insurance.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_insurance_type_form" model="ir.ui.view">
+            <field name="name">medical.insurance.type.form</field>
+            <field name="model">medical.insurance.type</field>
+            <field name="arch" type="xml">
+                <form string="Tipo de Seguro">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_insurance_type" model="ir.actions.act_window">
+            <field name="name">Tipos de Seguro</field>
+            <field name="res_model">medical.insurance.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_blood_group_tree" model="ir.ui.view">
+            <field name="name">medical.blood.group.tree</field>
+            <field name="model">medical.blood.group</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_blood_group_form" model="ir.ui.view">
+            <field name="name">medical.blood.group.form</field>
+            <field name="model">medical.blood.group</field>
+            <field name="arch" type="xml">
+                <form string="Grupo Sanguíneo">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_blood_group" model="ir.actions.act_window">
+            <field name="name">Grupos Sanguíneos</field>
+            <field name="res_model">medical.blood.group</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_rh_factor_tree" model="ir.ui.view">
+            <field name="name">medical.rh.factor.tree</field>
+            <field name="model">medical.rh.factor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_rh_factor_form" model="ir.ui.view">
+            <field name="name">medical.rh.factor.form</field>
+            <field name="model">medical.rh.factor</field>
+            <field name="arch" type="xml">
+                <form string="Factor RH">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_rh_factor" model="ir.actions.act_window">
+            <field name="name">Factores RH</field>
+            <field name="res_model">medical.rh.factor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_civil_status_tree" model="ir.ui.view">
+            <field name="name">medical.civil.status.tree</field>
+            <field name="model">medical.civil.status</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_civil_status_form" model="ir.ui.view">
+            <field name="name">medical.civil.status.form</field>
+            <field name="model">medical.civil.status</field>
+            <field name="arch" type="xml">
+                <form string="Estado Civil">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_civil_status" model="ir.actions.act_window">
+            <field name="name">Estados Civiles</field>
+            <field name="res_model">medical.civil.status</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_ethnicity_tree" model="ir.ui.view">
+            <field name="name">medical.ethnicity.tree</field>
+            <field name="model">medical.ethnicity</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_ethnicity_form" model="ir.ui.view">
+            <field name="name">medical.ethnicity.form</field>
+            <field name="model">medical.ethnicity</field>
+            <field name="arch" type="xml">
+                <form string="Grupo Étnico">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_ethnicity" model="ir.actions.act_window">
+            <field name="name">Grupos Étnicos</field>
+            <field name="res_model">medical.ethnicity</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_education_level_tree" model="ir.ui.view">
+            <field name="name">medical.education.level.tree</field>
+            <field name="model">medical.education.level</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_education_level_form" model="ir.ui.view">
+            <field name="name">medical.education.level.form</field>
+            <field name="model">medical.education.level</field>
+            <field name="arch" type="xml">
+                <form string="Grado de Instrucción">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_education_level" model="ir.actions.act_window">
+            <field name="name">Grados de Instrucción</field>
+            <field name="res_model">medical.education.level</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_religion_tree" model="ir.ui.view">
+            <field name="name">medical.religion.tree</field>
+            <field name="model">medical.religion</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_religion_form" model="ir.ui.view">
+            <field name="name">medical.religion.form</field>
+            <field name="model">medical.religion</field>
+            <field name="arch" type="xml">
+                <form string="Religión">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_religion" model="ir.actions.act_window">
+            <field name="name">Religiones</field>
+            <field name="res_model">medical.religion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_occupation_tree" model="ir.ui.view">
+            <field name="name">medical.occupation.tree</field>
+            <field name="model">medical.occupation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_occupation_form" model="ir.ui.view">
+            <field name="name">medical.occupation.form</field>
+            <field name="model">medical.occupation</field>
+            <field name="arch" type="xml">
+                <form string="Ocupación">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_occupation" model="ir.actions.act_window">
+            <field name="name">Ocupaciones</field>
+            <field name="res_model">medical.occupation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_location_tree" model="ir.ui.view">
+            <field name="name">medical.location.tree</field>
+            <field name="model">medical.location</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_location_form" model="ir.ui.view">
+            <field name="name">medical.location.form</field>
+            <field name="model">medical.location</field>
+            <field name="arch" type="xml">
+                <form string="Ubicación Geográfica">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_location" model="ir.actions.act_window">
+            <field name="name">Ubicaciones Geográficas</field>
+            <field name="res_model">medical.location</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_biological_state_tree" model="ir.ui.view">
+            <field name="name">medical.biological.state.tree</field>
+            <field name="model">medical.biological.state</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="function"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_biological_state_form" model="ir.ui.view">
+            <field name="name">medical.biological.state.form</field>
+            <field name="model">medical.biological.state</field>
+            <field name="arch" type="xml">
+                <form string="Estado de Función Biológica">
+                    <sheet>
+                        <group>
+                            <field name="function"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_biological_state" model="ir.actions.act_window">
+            <field name="name">Funciones Biológicas</field>
+            <field name="res_model">medical.biological.state</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_medical_disease_course_tree" model="ir.ui.view">
+            <field name="name">medical.disease.course.tree</field>
+            <field name="model">medical.disease.course</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_disease_course_form" model="ir.ui.view">
+            <field name="name">medical.disease.course.form</field>
+            <field name="model">medical.disease.course</field>
+            <field name="arch" type="xml">
+                <form string="Curso de la Enfermedad">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_medical_disease_course" model="ir.actions.act_window">
+            <field name="name">Cursos de Enfermedad</field>
+            <field name="res_model">medical.disease.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+medical_document_type_access,medical.document.type,model_medical_document_type,,1,1,1,1
+medical_insurance_type_access,medical.insurance.type,model_medical_insurance_type,,1,1,1,1
+medical_blood_group_access,medical.blood.group,model_medical_blood_group,,1,1,1,1
+medical_rh_factor_access,medical.rh.factor,model_medical_rh_factor,,1,1,1,1
+medical_civil_status_access,medical.civil.status,model_medical_civil_status,,1,1,1,1
+medical_ethnicity_access,medical.ethnicity,model_medical_ethnicity,,1,1,1,1
+medical_education_level_access,medical.education.level,model_medical_education_level,,1,1,1,1
+medical_religion_access,medical.religion,model_medical_religion,,1,1,1,1
+medical_occupation_access,medical.occupation,model_medical_occupation,,1,1,1,1
+medical_location_access,medical.location,model_medical_location,,1,1,1,1
+medical_biological_state_access,medical.biological.state,model_medical_biological_state,,1,1,1,1
+medical_disease_course_access,medical.disease.course,model_medical_disease_course,,1,1,1,1
+medical_clinical_history_access,medical.clinical.history,model_medical_clinical_history,,1,1,1,1
