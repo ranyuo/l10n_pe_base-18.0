@@ -56,7 +56,7 @@ class WebsiteHelpdeskTicket(http.Controller):
             return request.not_found()
 
         report = request.env.ref('helpdesk_website_extension.action_report_helpdesk_ticket').sudo()
-        pdf_content, _ = report._render_qweb_pdf([ticket.id])
+        pdf_content, _ = report._render_qweb_pdf(res_ids=[ticket.id])
 
         filename = "Expediente-%s" % (ticket.ticket_ref or ticket.name or ticket.id)
         filename = str(filename).replace('/', '-').replace('\\', '-')
