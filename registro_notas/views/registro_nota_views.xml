@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_registro_nota_tree" model="ir.ui.view">
+        <field name="name">registro.nota.tree</field>
+        <field name="model">registro.nota</field>
+        <field name="arch" type="xml">
+            <tree string="Registro de Notas" default_order="student_code">
+                <field name="student_code"/>
+                <field name="course_name"/>
+                <field name="career_name"/>
+                <field name="grade"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_registro_nota_form" model="ir.ui.view">
+        <field name="name">registro.nota.form</field>
+        <field name="model">registro.nota</field>
+        <field name="arch" type="xml">
+            <form string="Registro de Nota">
+                <sheet>
+                    <group>
+                        <field name="student_code"/>
+                        <field name="course_name"/>
+                        <field name="career_name"/>
+                        <field name="grade"/>
+                        <field name="observation" widget="text"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_registro_nota_search" model="ir.ui.view">
+        <field name="name">registro.nota.search</field>
+        <field name="model">registro.nota</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Notas">
+                <field name="student_code"/>
+                <field name="course_name"/>
+                <field name="career_name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_registro_nota" model="ir.actions.act_window">
+        <field name="name">Registro de Notas</field>
+        <field name="res_model">registro.nota</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
