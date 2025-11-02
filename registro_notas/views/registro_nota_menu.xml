@@ -2,4 +2,7 @@
 <odoo>
     <menuitem id="menu_registro_notas_root" name="Registro de Notas" sequence="10"/>
     <menuitem id="menu_registro_notas" name="Notas de Alumnos" parent="menu_registro_notas_root" action="action_registro_nota" sequence="10"/>
+    <menuitem id="menu_registro_notas_configuration" name="Configuración" parent="menu_registro_notas_root" sequence="20"/>
+    <menuitem id="menu_registro_carreras" name="Carreras" parent="menu_registro_notas_configuration" action="action_registro_carrera" sequence="10"/>
+    <menuitem id="menu_registro_cursos" name="Cursos" parent="menu_registro_notas_configuration" action="action_registro_curso" sequence="20"/>
 </odoo>
