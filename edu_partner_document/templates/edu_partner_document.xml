@@ -160,7 +160,7 @@
             </div>
         </t>
     </template>
-    <template id="partner_document_assets" inherit_id="website.assets_frontend">
+    <template id="partner_document_assets" inherit_id="web.assets_frontend">
         <xpath expr="." position="inside">
             <script type="text/javascript">
                 (function () {
