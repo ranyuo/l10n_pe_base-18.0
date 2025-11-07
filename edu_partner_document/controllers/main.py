@@ -29,7 +29,7 @@ class WebsitePartnerDocument(http.Controller):
 
     @http.route(['/partner-document', '/partner-document/page/<int:page>'], type='http', auth="public", website=True)
     def partner_document_list(self, page=1, **kwargs):
-        search = kwargs.get('search', '')
+        search = (kwargs.get('search') or '').strip()
         domain = []
         partner_documents = []
         pages = 1
@@ -63,7 +63,11 @@ class WebsitePartnerDocument(http.Controller):
                     captcha_error = True
 
             if captcha_valid:
-                domain = ['|', '|', ('name', 'ilike', search), ('partner_code', '=', search), ('partner_vat', '=', search)]
+                domain = ['|', '|', '|',
+                          ('name', 'ilike', search),
+                          ('partner_id.name', 'ilike', search),
+                          ('partner_code', 'ilike', search),
+                          ('partner_vat', 'ilike', search)]
 
                 page_size = 10
 
