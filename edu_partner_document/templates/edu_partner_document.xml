@@ -81,22 +81,10 @@
                         <div class="input-group">
                             <input type="text" name="search" class="form-control"
                                    placeholder="Buscar por nombre de contacto, dni de contacto o código de documento"
-                                   t-att-value="search" required="required"/>
+                                   t-att-value="search"/>
                             <button type="submit" class="btn btn-primary">Buscar</button>
                         </div>
-                        <div class="input-group mt-2">
-                            <span class="input-group-text">
-                                <t t-esc="captcha_question"/>
-                            </span>
-                            <input type="text" name="captcha_answer" class="form-control" placeholder="Resuelva la operación" required="required"/>
-                        </div>
                     </form>
-
-                    <t t-if="captcha_error">
-                        <div class="alert alert-danger" role="alert">
-                            La validación de seguridad no es correcta. Intente nuevamente.
-                        </div>
-                    </t>
 
                     <t t-if="model_missing">
                         <div class="alert alert-danger" role="alert">
