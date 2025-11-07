@@ -35,8 +35,7 @@ class WebsitePartnerDocument(http.Controller):
                 partner_documents = PartnerDocument.search(domain, limit=page_size, offset=offset)
 
         subtitle = _(
-            "En este módulo Ud. podrá consultar información sobre su certificado/"
-            "constancia. Ingrese su N° Documento de Identificación."
+            "En este módulo Ud. podrá consultar información sobre su certificado/constancia. Ingrese su N° Documento de Identificación."
         )
 
         return request.render("edu_partner_document.partner_document_page", {

@@ -75,7 +75,12 @@
 
                 <div id="print-area">
                     <h1 class="partner-document-title">CERTIFICADOS DEL PARTICIPANTE</h1>
-                    <p class="partner-document-subtitle"><t t-esc="subtitle"/></p>
+                    <p class="partner-document-subtitle">
+                        <t t-if="subtitle">
+                            <t t-esc="subtitle"/>
+                        </t>
+                        <t t-else="">En este módulo Ud. podrá consultar información sobre su certificado/constancia. Ingrese su N° Documento de Identificación.</t>
+                    </p>
 
                     <form action="/partner-document" method="get" class="mb-4 no-print">
                         <div class="input-group">
