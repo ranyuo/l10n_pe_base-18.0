@@ -195,7 +195,7 @@
                             const expected = parseInt(wrapper.dataset.expectedResult || '', 10);
                             const value = parseInt(answerInput.value, 10);
 
-                            if (!isNaN(value) && value === expected) {
+                            if (!isNaN(value) &amp;&amp; value === expected) {
                                 searchButton.disabled = false;
                                 answerInput.classList.add('is-valid');
                                 answerInput.classList.remove('is-invalid');
