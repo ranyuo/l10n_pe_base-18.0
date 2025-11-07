@@ -9,6 +9,12 @@
                         text-transform: uppercase;
                     }
 
+                    .partner-document-subtitle {
+                        font-size: 1.1rem;
+                        margin-bottom: 1.5rem;
+                        color: #6c757d;
+                    }
+
                     .partner-document-table {
                         border: 2px solid #0d6efd;
                         border-collapse: collapse;
@@ -76,6 +82,7 @@
                 </style>
 
                 <h1 class="partner-document-title no-print">CERTIFICADOS DEL PARTICIPANTE</h1>
+                <p class="partner-document-subtitle no-print">-En este módulo Ud. podrá consultar información sobre su certificado/constancia Ingrese su N° Documento de Identificación.</p>
 
                 <form action="/partner-document" method="get" class="mb-4 no-print">
                     <div class="input-group">
@@ -94,6 +101,7 @@
                     </div>
                     <div id="print-area">
                         <h1 class="partner-document-title print-only">CERTIFICADOS DEL PARTICIPANTE</h1>
+                        <p class="partner-document-subtitle print-only">-En este módulo Ud. podrá consultar información sobre su certificado/constancia Ingrese su N° Documento de Identificación.</p>
                         <div class="table-responsive" style="font-size: 12px;">
                             <table class="table table-striped table-small partner-document-table">
                                 <thead>
