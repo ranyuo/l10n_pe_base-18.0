@@ -1,4 +1,4 @@
-from odoo import http
+from odoo import http, _
 from odoo.http import request
 import math
 
@@ -34,6 +34,11 @@ class WebsitePartnerDocument(http.Controller):
                 offset = (page - 1) * page_size
                 partner_documents = PartnerDocument.search(domain, limit=page_size, offset=offset)
 
+        subtitle = _(
+            "En este módulo Ud. podrá consultar información sobre su certificado/"
+            "constancia. Ingrese su N° Documento de Identificación."
+        )
+
         return request.render("edu_partner_document.partner_document_page", {
             'partner_documents': partner_documents,
             'search': search,
@@ -41,4 +46,5 @@ class WebsitePartnerDocument(http.Controller):
             'pages': pages,
             'total': total,
             'model_missing': model_missing,
+            'subtitle': subtitle,
         })
