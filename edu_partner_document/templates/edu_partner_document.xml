@@ -77,20 +77,12 @@
                     <h1 class="partner-document-title">CERTIFICADOS DEL PARTICIPANTE</h1>
                     <p class="partner-document-subtitle">-En este módulo Ud. podrá consultar información sobre su certificado/constancia Ingrese su N° Documento de Identificación.</p>
 
-                    <form action="/partner-document" method="get" class="mb-4 no-print" id="partner-document-search-form">
-                        <div class="mb-2" id="math-challenge-wrapper">
-                            <label class="form-label mb-1">Resuelva la siguiente operación para habilitar la búsqueda:</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="math-challenge-text"></span>
-                                <input type="number" class="form-control" id="math-challenge-answer" placeholder="Resultado" min="0"/>
-                            </div>
-                            <div class="form-text">Ingrese el resultado correcto para activar el botón "Buscar".</div>
-                        </div>
+                    <form action="/partner-document" method="get" class="mb-4 no-print">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control"
                                    placeholder="Buscar por nombre de contacto, dni de contacto o código de documento"
                                    t-att-value="search"/>
-                            <button type="submit" class="btn btn-primary" id="partner-document-search-button" disabled="disabled">Buscar</button>
+                            <button type="submit" class="btn btn-primary">Buscar</button>
                         </div>
                     </form>
 
@@ -159,65 +151,5 @@
                 </nav>
             </div>
         </t>
-    </template>
-    <template id="partner_document_assets" inherit_id="web.assets_frontend">
-        <xpath expr="." position="inside">
-            <script type="text/javascript">
-                (function () {
-                    const initMathChallenge = function () {
-                        const wrapper = document.getElementById('math-challenge-wrapper');
-                        if (!wrapper || wrapper.dataset.challengeInit === '1') {
-                            return;
-                        }
-                        wrapper.dataset.challengeInit = '1';
-
-                        const challengeText = document.getElementById('math-challenge-text');
-                        const answerInput = document.getElementById('math-challenge-answer');
-                        const searchButton = document.getElementById('partner-document-search-button');
-
-                        if (!challengeText || !answerInput || !searchButton) {
-                            return;
-                        }
-
-                        const generateChallenge = function () {
-                            const firstNumber = Math.floor(Math.random() * 9) + 1;
-                            const secondNumber = Math.floor(Math.random() * 9) + 1;
-                            const expected = firstNumber + secondNumber;
-
-                            challengeText.textContent = `${firstNumber} + ${secondNumber} =`;
-                            answerInput.value = '';
-                            answerInput.classList.remove('is-valid', 'is-invalid');
-                            searchButton.disabled = true;
-                            wrapper.dataset.expectedResult = expected;
-                        };
-
-                        const validateAnswer = function () {
-                            const expected = parseInt(wrapper.dataset.expectedResult || '', 10);
-                            const value = parseInt(answerInput.value, 10);
-
-                            if (!isNaN(value) &amp;&amp; value === expected) {
-                                searchButton.disabled = false;
-                                answerInput.classList.add('is-valid');
-                                answerInput.classList.remove('is-invalid');
-                            } else {
-                                searchButton.disabled = true;
-                                if (answerInput.value !== '') {
-                                    answerInput.classList.add('is-invalid');
-                                    answerInput.classList.remove('is-valid');
-                                } else {
-                                    answerInput.classList.remove('is-invalid', 'is-valid');
-                                }
-                            }
-                        };
-
-                        generateChallenge();
-                        answerInput.addEventListener('input', validateAnswer);
-                    };
-
-                    document.addEventListener('DOMContentLoaded', initMathChallenge);
-                    document.addEventListener('odoo:page-ready', initMathChallenge);
-                })();
-            </script>
-        </xpath>
     </template>
 </odoo>
