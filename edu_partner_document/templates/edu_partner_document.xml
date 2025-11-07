@@ -86,7 +86,12 @@
                         </div>
                     </form>
 
-                    <t t-if="partner_documents">
+                    <t t-if="model_missing">
+                        <div class="alert alert-danger" role="alert">
+                            No se encontró el registro de certificados. Por favor, contacte al administrador del sistema.
+                        </div>
+                    </t>
+                    <t t-elif="partner_documents">
                         <div class="d-flex justify-content-end mb-2 no-print">
                             <button type="button" class="btn btn-print" onclick="window.print()">
                                 Imprimir
