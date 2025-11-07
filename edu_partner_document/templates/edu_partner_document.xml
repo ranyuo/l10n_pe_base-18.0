@@ -15,20 +15,20 @@
                 </form>
 
                 <t t-if="partner_documents">
+                    <div class="d-flex justify-content-end mb-2">
+                        <button type="button" class="btn btn-secondary" onclick="window.print()">
+                            Imprimir
+                        </button>
+                    </div>
                     <div class="table-responsive" style="font-size: 12px;">
                         <table class="table table-striped table-small">
                             <thead>
                                 <tr>
-                                    <th>Dni</th>
-                                    <th>Código</th>
-                                    <th>Nombres y apellidos</th>
-                                    <th>Descripción</th>
-                                    <th>F. emisión</th>
-                                    <th>F. inicio</th>
-                                    <th>F. fin</th>
-                                    <th>Total hrs</th>
-                                    <th>Institución Educativa</th>
-                                    <th>Tipo de doc.</th>
+                                    <th>DNI</th>
+                                    <th>Certificado</th>
+                                    <th>Participante</th>
+                                    <th>Actividad</th>
+                                    <th>Fecha</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,11 +39,6 @@
                                         <td><t t-esc="c.partner_id.name or ''"/></td>
                                         <td><t t-esc="c.name or ''"/></td>
                                         <td><t t-esc="c.issue_date or ''"/></td>
-                                        <td><t t-esc="c.start_date or ''"/></td>
-                                        <td><t t-esc="c.end_date or ''"/></td>
-                                        <td><t t-esc="c.total_hours or ''"/></td>
-                                        <td><t t-esc="c.educational_institution_id.name or ''"/></td>
-                                        <td><t t-esc="c.document_type.name or ''"/></td>
                                     </tr>
                                 </t>
                             </tbody>
