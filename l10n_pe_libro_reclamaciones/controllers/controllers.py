@@ -20,8 +20,8 @@ class LibroReclamaciones(http.Controller):
         return ['consumer_type', 'consumer_name', 'consumer_lastname', 'consumer_email', 'consumer_document_type', 'consumer_document',
                 'consumer_phone', 'consumer_address', 'consumer_state_id', 'consumer_province_id', 'consumer_district_id',
                 'product_type', 'product_code', 'order_name', 'date_order', 'product_name',
-                'claim_type', 'claim_amount', 'claim_detail', 'claim_request']
-
+                'claim_type', 'claim_detail', 'claim_request']
+#'claim_amount'
     def _fields_required_consumer_type_company(self):
         return ['consumer_company_name', 'consumer_company_document']
 
