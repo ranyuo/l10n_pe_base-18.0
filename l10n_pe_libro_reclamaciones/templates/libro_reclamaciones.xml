@@ -377,7 +377,14 @@
 
 
                                     <div class="input-group flex-nowrap pt-3 justify-content-center">
-                                        <button id="crear_reclamo" type="submit" class="btn btn-primary col">Enviar</button>
+                                        <a role="button" class="btn btn-secondary col-5 mr-2" 
+                                           href="/l10n_pe_libro_reclamaciones/static/docs/Manual.pdf" 
+                                           download="Manual_de_Reclamaciones.pdf">
+                                            Manual
+                                        </a>
+                                        <button id="crear_reclamo" type="submit" class="btn btn-primary col-5 ml-2">
+                                            Enviar
+                                        </button>
                                     </div>
                                 </div>
                                 <hr class="my-4"/>
