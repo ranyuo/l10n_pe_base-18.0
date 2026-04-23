@@ -45,6 +45,22 @@
                         color: #ffffff;
                     }
 
+                    .btn-view-pdf {
+                        background-color: #dc3545;
+                        border-color: #dc3545;
+                        color: #ffffff;
+                        font-weight: 700;
+                        padding: 0.15rem 0.45rem;
+                        font-size: 0.7rem;
+                    }
+
+                    .btn-view-pdf:hover,
+                    .btn-view-pdf:focus {
+                        background-color: #bb2d3b;
+                        border-color: #b02a37;
+                        color: #ffffff;
+                    }
+
                     @media print {
                         body * {
                             visibility: hidden;
@@ -111,6 +127,7 @@
                                         <th>Participante</th>
                                         <th>Actividad</th>
                                         <th>Fecha</th>
+                                        <th>VER</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -121,6 +138,16 @@
                                             <td><t t-esc="c.partner_id.name or ''"/></td>
                                             <td><t t-esc="c.name or ''"/></td>
                                             <td><t t-esc="c.issue_date or ''"/></td>
+                                            <td class="text-center">
+                                                <t t-if="c.file">
+                                                    <a class="btn btn-view-pdf"
+                                                       target="_blank"
+                                                       t-att-href="'/web/content/edu.partner.document/%s/file/%s?download=false' % (c.id, c.filename or ('certificado_%s.pdf' % c.id))">
+                                                        PDF
+                                                    </a>
+                                                </t>
+                                                <t t-else="">-</t>
+                                            </td>
                                         </tr>
                                     </t>
                                 </tbody>
