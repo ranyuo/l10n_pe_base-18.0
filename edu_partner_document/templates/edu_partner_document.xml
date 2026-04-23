@@ -33,15 +33,15 @@
                     }
 
                     .btn-print {
-                        background-color: #0d6efd;
+                        background-color: #dc3545;
                         color: #ffffff;
-                        border-color: #0d6efd;
+                        border-color: #dc3545;
                     }
 
                     .btn-print:hover,
                     .btn-print:focus {
-                        background-color: #0b5ed7;
-                        border-color: #0a58ca;
+                        background-color: #bb2d3b;
+                        border-color: #b02a37;
                         color: #ffffff;
                     }
 
@@ -50,8 +50,8 @@
                         border-color: #dc3545;
                         color: #ffffff;
                         font-weight: 700;
-                        padding: 0.15rem 0.45rem;
-                        font-size: 0.7rem;
+                        padding: 0.3rem 0.65rem;
+                        font-size: 0.8rem;
                     }
 
                     .btn-view-pdf:hover,
@@ -143,7 +143,7 @@
                                                     <a class="btn btn-view-pdf"
                                                        target="_blank"
                                                        t-att-href="'/web/content/edu.partner.document/%s/file/%s?download=false' % (c.id, c.filename or ('certificado_%s.pdf' % c.id))">
-                                                        PDF
+                                                        VER
                                                     </a>
                                                 </t>
                                                 <t t-else="">-</t>
