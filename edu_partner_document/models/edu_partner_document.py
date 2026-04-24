@@ -45,8 +45,6 @@ class EduPartnerDocument(models.Model):
     def _compute_file_access_url(self):
         for record in self:
             if record.file:
-                record.file_access_url = (
-                    f"/web/content?model={record._name}&id={record.id}&field=file&download=false"
-                )
+                record.file_access_url = f"/partner-document/file/{record.id}"
             else:
                 record.file_access_url = False
