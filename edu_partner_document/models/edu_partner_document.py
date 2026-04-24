@@ -26,8 +26,12 @@ class EduPartnerDocument(models.Model):
         ], string="Estado", default='draft')
     start_date = fields.Date(string="Fecha de inicio")
     end_date = fields.Date(string="Fecha de fin")
-    file = fields.Binary(string="Archivo")
+    file = fields.Binary(string="Archivo", attachment=True)
     filename = fields.Char(string="Nombre de archivo")
+    file_access_url = fields.Char(
+        string="URL del archivo",
+        compute="_compute_file_access_url",
+    )
     description = fields.Text(string="Descripción")
 
     
@@ -36,3 +40,11 @@ class EduPartnerDocument(models.Model):
         self.partner_vat = self.partner_id.vat
         self.partner_phone = self.partner_id.phone
         self.partner_email = self.partner_id.email
+
+    @api.depends('file')
+    def _compute_file_access_url(self):
+        for record in self:
+            if record.file:
+                record.file_access_url = f"/partner-document/file/{record.id}"
+            else:
+                record.file_access_url = False

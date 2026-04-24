@@ -1,6 +1,8 @@
 from odoo import http, _
 from odoo.http import request
 import math
+import mimetypes
+import base64
 
 import logging
 _logger = logging.getLogger(__name__)
@@ -47,3 +49,21 @@ class WebsitePartnerDocument(http.Controller):
             'model_missing': model_missing,
             'subtitle': subtitle,
         })
+
+    @http.route('/partner-document/file/<int:document_id>', type='http', auth="public", website=True)
+    def partner_document_file(self, document_id, **kwargs):
+        document = request.env['edu.partner.document'].sudo().browse(document_id)
+        if not document.exists() or not document.file:
+            return request.not_found()
+
+        filename = document.filename or f"{document.name or 'documento'}.pdf"
+        mimetype, _encoding = mimetypes.guess_type(filename)
+        mimetype = mimetype or 'application/octet-stream'
+
+        return request.make_response(
+            base64.b64decode(document.file),
+            headers=[
+                ('Content-Type', mimetype),
+                ('Content-Disposition', f'inline; filename="{filename}"'),
+            ],
+        )
