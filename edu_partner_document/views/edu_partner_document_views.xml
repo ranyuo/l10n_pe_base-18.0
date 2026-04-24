@@ -50,7 +50,8 @@
                             <field name="issue_date" />
                             <field name="total_hours" />
                             <field name="educational_institution_id" />
-                            <field name="file" />
+                            <field name="file" filename="filename"/>
+                            <field name="file_access_url" widget="url" string="Ver PDF" readonly="1" invisible="not file"/>
                             <field name="filename" invisible="1" />
                         </group>
                     </group>

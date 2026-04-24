@@ -142,7 +142,7 @@
                                                 <t t-if="c.file">
                                                     <a class="btn btn-view-pdf"
                                                        target="_blank"
-                                                       t-att-href="'/web/content/edu.partner.document/%s/file/%s?download=false' % (c.id, c.filename or ('certificado_%s.pdf' % c.id))">
+                                                       t-att-href="c.file_access_url">
                                                         VER
                                                     </a>
                                                 </t>
