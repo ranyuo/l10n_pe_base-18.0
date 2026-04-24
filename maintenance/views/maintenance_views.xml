@@ -416,6 +416,7 @@
                                     <field name="partner_ref"/>
                                     <field name="model"/>
                                     <field name="serial_no"/>
+                                    <field name="barcode"/>
                                 </group><group>
                                     <field name="effective_date"/>
                                     <field name="cost" groups="maintenance.group_equipment_manager"/>
@@ -499,6 +500,7 @@
                 <field name="owner_user_id" string="Owner"/>
                 <field name="assign_date" groups="base.group_no_one"/>
                 <field name="serial_no"/>
+                <field name="barcode"/>
                 <field name="technician_user_id"/>
                 <field name="category_id"/>
                 <field name="partner_id" column_invisible="True"/>
@@ -514,8 +516,9 @@
         <field name="arch" type="xml">
             <search string="Search">
                 <field string="Equipment" name="name" filter_domain="[
-                    '|', '|', '|',
-                    ('name', 'ilike', self), ('model', 'ilike', self), ('serial_no', 'ilike', self), ('partner_ref', 'ilike', self)]"/>
+                    '|', '|', '|', '|',
+                    ('name', 'ilike', self), ('model', 'ilike', self), ('serial_no', 'ilike', self), ('barcode', 'ilike', self), ('partner_ref', 'ilike', self)]"/>
+                <field name="barcode"/>
                 <field string="Category" name="category_id"/>
                 <field name="owner_user_id"/>
                 <filter string="My Equipment" name="my" domain="[('owner_user_id', '=', uid)]"/>

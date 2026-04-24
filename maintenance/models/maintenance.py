@@ -148,6 +148,7 @@ class MaintenanceEquipment(models.Model):
     location = fields.Char('Location')
     model = fields.Char('Model')
     serial_no = fields.Char('Serial Number', copy=False)
+    barcode = fields.Char('Barcode', copy=False)
     assign_date = fields.Date('Assigned Date', tracking=True)
     cost = fields.Float('Cost')
     note = fields.Html('Note')
